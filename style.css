@@ -35,7 +35,7 @@ Text Domain::   inmuebles
  *      13.9. Author Bio
  *      13.10. Search Form
  *      13.11. Scroll to Top Button
- *      13.12. Portfolio
+ *      13.12. Inmueble
  * 14. Sidebar
  *      14.1. Sidebar
  *      14.2. Footer Sidebar
@@ -44,6 +44,8 @@ Text Domain::   inmuebles
  * 		15.2 Font Sizes
  * 16. Blocks
  * 		16.1. Buttons
+ * 17. Swiper
+        17.1
  */
 /**
  * Foundation for Sites by ZURB
@@ -4004,59 +4006,59 @@ Text Domain::   inmuebles
     
     }
     
-    /** -- 13.12. Portfolio */
-    body.post-type-archive-proyecto #main > section,
-    body.tax-tipo_de_proyecto #main > section {
+    /** -- 13.12. Inmueble */
+    body.post-type-archive-inmueble #main > section,
+    body.tax-tipo_de_inmueble #main > section {
         margin-bottom:3rem;
         border-bottom: 1px solid #cacaca;
     }
     
-    body.post-type-archive-proyecto .tipos-filter,
-    body.tax-tipo_de_proyecto .tipos-filter {
+    body.post-type-archive-inmueble .tipos-filter,
+    body.tax-tipo_de_inmueble .tipos-filter {
         display: flex;
         list-style: none;
         justify-content: center;
         margin-left:0;
     }
     
-    body.post-type-archive-proyecto .tipos-filter li,
-    body.tax-tipo_de_proyecto .tipos-filter li {
+    body.post-type-archive-inmueble .tipos-filter li,
+    body.tax-tipo_de_inmueble .tipos-filter li {
         padding:1rem;
     }
     
-    .proyecto-cliente {
+    .inmueble-cliente {
         font-size:1.1rem;
         font-weight: bold;
         margin-bottom:1rem;
     }
     
-    .proyecto-cliente .cliente-value {
+    .inmueble-cliente .cliente-value {
         color:#f47a29;
     }
     
     @media print, screen and (min-width: 40em) {
-        body.post-type-archive-proyecto #content,
-        body.tax-tipo_de_proyecto #content {
+        body.post-type-archive-inmueble #content,
+        body.tax-tipo_de_inmueble #content {
             margin-left: 0;
             margin-right: 0;
             max-width: 100%;
             overflow: hidden;
         }
     
-        body.post-type-archive-proyecto #main,
-        body.tax-tipo_de_proyecto #main {
+        body.post-type-archive-inmueble #main,
+        body.tax-tipo_de_inmueble #main {
             padding:0;
         }
     
-        body.post-type-archive-proyecto #main > section,
-        body.tax-tipo_de_proyecto #main > section {
+        body.post-type-archive-inmueble #main > section,
+        body.tax-tipo_de_inmueble #main > section {
             height:100vh;
             position:relative;
             margin-bottom:0;
             border: none;
         }
-        body.post-type-archive-proyecto .featured-image,
-        body.tax-tipo_de_proyecto .featured-image {
+        body.post-type-archive-inmueble .featured-image,
+        body.tax-tipo_de_inmueble .featured-image {
             position: absolute;
             margin-bottom: 0;
             top: 0;
@@ -4065,15 +4067,15 @@ Text Domain::   inmuebles
             right: 0;
         }
     
-        body.post-type-archive-proyecto .featured-image img,
-        body.tax-tipo_de_proyecto .featured-image img {
+        body.post-type-archive-inmueble .featured-image img,
+        body.tax-tipo_de_inmueble .featured-image img {
             height: 100vh;
             width: 100vw;
             object-fit: cover;
         }
     
-        body.post-type-archive-proyecto #content .post-content,
-        body.tax-tipo_de_proyecto #content .post-content {
+        body.post-type-archive-inmueble #content .post-content,
+        body.tax-tipo_de_inmueble #content .post-content {
             position:relative;
             width: 30vw;
             padding: 2rem;
@@ -4085,19 +4087,19 @@ Text Domain::   inmuebles
         }
     
     
-        body.post-type-archive-proyecto #main > section:nth-child(odd) .post-content,
-        body.tax-tipo_de_proyecto #main > section:nth-child(odd) .post-content {
+        body.post-type-archive-inmueble #main > section:nth-child(odd) .post-content,
+        body.tax-tipo_de_inmueble #main > section:nth-child(odd) .post-content {
             top: 10vh;
             left:60vw;
         }
-        body.post-type-archive-proyecto #main > section:nth-child(even) .post-content,
-        body.tax-tipo_de_proyecto #main > section:nth-child(even) .post-content {
+        body.post-type-archive-inmueble #main > section:nth-child(even) .post-content,
+        body.tax-tipo_de_inmueble #main > section:nth-child(even) .post-content {
             top: 10vh;
             left:10vw;
         }
     
-        body.post-type-archive-proyecto #content .post-title:after,
-        body.tax-tipo_de_proyecto #content .post-title:after {
+        body.post-type-archive-inmueble #content .post-title:after,
+        body.tax-tipo_de_inmueble #content .post-title:after {
             width:0;
         }
     }
@@ -4334,3 +4336,25 @@ Text Domain::   inmuebles
         content: '';
     }
     
+
+/**  --  17.1 Swiper -- **/
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
