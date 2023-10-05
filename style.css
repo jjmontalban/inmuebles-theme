@@ -3964,42 +3964,83 @@ Text Domain::   inmuebles
         }
     }
     
+
+
+
+
     /* -- 13.10 Search Form */
+    /* Estilos para el contenedor del formulario */
+/* Estilos para el contenedor del formulario */
+.search-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff6900;
+    padding: 20px;
+}
+
+/* Estilos para el formulario */
+.search-form {
+    display: flex;
+    justify-content: space-around; /* Distribuye los elementos de manera uniforme */
+    align-items: center;
+    width: 90%; /* Ancho del formulario */
+}
+
+/* Estilos para el contenedor del formulario */
+.search-container .search-form select,
+.search-container .search-form input[type="submit"] {
+    width: 30%;
+    height: 40px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+    margin-bottom: 0;
+    text-align: center; /* Centra el texto dentro de los selects */ 
+         /* Centra el texto verticalmente estableciendo la misma altura que la altura del elemento */
+        font-size: 16px; 
+
+}
+
+.search-container .search-form input[type="submit"]:hover {
+    background-color: #ff6900;
+    border-color: white;
+    color: white;
+}
+
+/* Estilos para el título */
+.search-title {
+    text-align: center; /* Centra el texto horizontalmente */
+    color: white;
+    font-size: 1.5em;
+}
+
+/* Vista para móviles */
+/* Estilos para dispositivos de pantalla pequeña */
+@media screen and (max-width: 40em) {
+    
     .search-form {
-        display: flex;
-        align-content: stretch;
+        display: block;
     }
-    
-    .search-form .search-submit {
-        display: inline-block;
-        vertical-align: middle;
-        margin: 0 0 0.85rem 0;
-        font-family: inherit;
-        padding: 0.85em 1em;
-        -webkit-appearance: none;
-        border: 1px solid transparent;
-        border-radius: 0;
-        transition: background-color 0.25s ease-out, color 0.25s ease-out;
-        font-size: 0.75rem;
-        line-height: 1;
-        text-align: center;
-        cursor: pointer;
-        background-color: #f47a29;
-        color: #fefefe;
+        
+    .search-form select,
+    .search-form input[type="submit"] {
+        width: 100% !important;
+        margin-bottom: 10px;
     }
-    
-    .search-form .search-submit:hover, .search-form .search-submit:focus {
-        background-color: #d95d0b;
-        color: #333;
-    }
-    
+}
+
+
     /* -- 13.11 Scroll to Top button */
     #scroll-top {
         display:none;
         position:fixed;
         bottom:30px;
         right:30px;
-        margin:0;
+        margin:0;   
     }
     #scroll-top.show {
         display: block;
