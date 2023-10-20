@@ -618,7 +618,7 @@ Text Domain::   inmuebles
     
     /* -- 02. Flex Grid */
     .row {
-        max-width: 63.15789rem;
+        max-width: 90rem;
         margin-right: auto;
         margin-left: auto;
         display: -webkit-flex;
@@ -3403,8 +3403,7 @@ Text Domain::   inmuebles
     
     /* -- 13.2. Content */
     #content article.hentry {
-        margin-bottom: 3rem;
-        border-bottom: 1px solid #e6e6e6;
+        margin-bottom: 1rem;
         padding-bottom: 1rem;
     }
     
@@ -4399,3 +4398,10 @@ Text Domain::   inmuebles
     height: 100%;
     object-fit: cover;
   }
+
+
+
+
+
+
+  
