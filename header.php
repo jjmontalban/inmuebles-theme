@@ -47,7 +47,10 @@
 		</div>
 	</div>
 	
-	<?php get_search_form( );  ?>
+	<!-- No mostrar en singles -->
+	<?php if (!is_singular('inmueble')): ?>
+		<?php get_search_form( );  ?>
+	<?php endif; ?>
 
 </header>
 

@@ -81,6 +81,13 @@
     display: flex;
     flex-direction: column; /* Se asegura que todos los elementos estén en una sola columna */
     align-items: center; /* Centra todo en la columna */
+
+
+    gap: 20px; /* Espacio entre las columnas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+    transition: box-shadow 0.3s ease; /* Transición suave para el efecto hover */
+    cursor: pointer; /* Cambia el cursor a mano cuando pasa por encima */
+    border-radius: 0.25rem; /* Ajusta este valor según tus preferencias */
 }
 
 /* Galería */
@@ -134,6 +141,9 @@
     width: 45%; /* Ajusta según tus necesidades */
 }
 
+#content {
+}
+
 </style>
 
 
@@ -159,7 +169,9 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <!-- Detalles de un inmueble -->
     <?php if (is_singular('inmueble')): ?>
+        <!-- Título -->
         <div class="inmueble-details">
+            <h2><?php echo $tipos_inmueble_map[$tipo_inmueble] . ' en ' . $campos['nombre_calle'] . ', ' . $campos['localidad'] ?></h2>
             <!-- Galería de imágenes -->
             <div class="inmueble-gallery">
                 <div class="swiper mySwiper">
@@ -177,8 +189,6 @@
             </div>
             <!-- Contenido del inmueble -->
             <div class="inmueble-content"> 
-                <!-- Título -->
-                <h2><?php echo $tipos_inmueble_map[$tipo_inmueble] . ' en ' . $campos['nombre_calle'] . ', ' . $campos['localidad'] ?></h2>
                 <!-- Precio -->
                 <p class="inmueble-price">
                     <?php if ($campos['precio_venta'] ?? '') : ?>
@@ -206,6 +216,7 @@
             <div class="column-list-container">
                 <!-- Primera columna -->
                 <div class="column-list">
+                    
                     <h3>Características básicas</h3>
                     <ul>
                         <?php
@@ -343,14 +354,20 @@
                             echo ($campos['calefaccion'] == 'individual') ? 'Individual' : (($campos['calefaccion'] == 'centralizada') ? 'Centralizada' : (($campos['calefaccion'] == 'no_dispone') ? 'No dispone' : $campos['calefaccion']));
                             echo '</li>';
                         }
-
-                        
-                        
-                        
-                        ?>
-                        <li>Elemento 2</li>
-                        <li>Elemento 3</li>
+                        ?> 
                     </ul>
+
+                    <h3>Otras características:</h3>
+                    <ul>
+                        <?php 
+                            if (!empty( $campos['otra_caract_inm'] )){
+                            foreach ( $campos['otra_caract_inm'] as $caracteristica ) {
+                                echo '<li>' . esc_html( $caracteristica ) . '</li>';
+                            }  
+                        }
+                        ?>   
+                    </ul>
+                    
                 </div>
 
                 <!-- Segunda columna -->
@@ -399,30 +416,33 @@
                         ?>
                         </ul>
                         <?php 
-                        foreach ( $campos['orientacion'] as $orientacion ) {
-                            echo (!empty( $orientacion )) ? '<li>' . esc_html( $orientacion ) . '</li>' : '';
-                        }  
+                        if ( !empty( $campos['calif_consumo_energ'] )){
+                            echo '<h3>Orientación:</h3>';
+                            foreach ( $campos['orientacion'] as $orientacion ) {
+                                echo '<li>' . esc_html( $orientacion ) . '</li>';
+                            }
+                        }
+                          
+                        if (!empty( $campos['calificacion_terreno'] )){
+                            foreach ( $campos['calificacion_terreno'] as $tipo ) {
+                                    echo '<li>' . esc_html( $tipo ) . '</li>';             
+                            }
+                        }
                         
-                        $tipos_calificacion = array('residencial_altura', 'residencial_unif', 'terciario_ofi', 'terciario_com', 'terciario_hotel', 'industrial', 'dotaciones', 'otra');
-                        foreach ( $tipos_calificacion as $tipo ) {
-                            if (!empty($campos[$tipo])) {
-                                echo '<li>' . esc_html( $campos[$tipo] ) . '</li>';             
+                        if(!empty( $campos['caract_local'] )){
+                            echo '<h3>Equipamiento del local:</h3>';
+                            foreach ( $campos['caract_local'] as $carac_local ) {
+                                echo '<li>' . esc_html( $carac_local ) . '</li>';
+                            }  
+                        }
+                        if(!empty( $campos['caract_local'] )){
+                            echo '<h3>Características del garaje</h3>';
+                            foreach ( $campos['caract_garaje'] as $caracteristica_garaje ) {
+                                echo '<li>' . esc_html( $caracteristica_garaje ) . '</li>';
                             }
                         }
 
-                        foreach ( $campos['otra_caract_inm'] as $caracteristica ) {
-                            echo (!empty( $caracteristica )) ? '<li>' . esc_html( $caracteristica ) . '</li>' : '';
-                        }  
 
-                        foreach ( $campos['caract_local'] as $equipamiento ) {
-                            echo (!empty( $equipamiento )) ? '<li>' . esc_html( $equipamiento ) . '</li>' : '';
-                        }  
-
-                        foreach ( $campos['caract_garaje'] as $caracteristica_garaje ) {
-                            echo (!empty( $caracteristica_garaje )) ? '<li>' . esc_html( $caracteristica_garaje ) . '</li>' : '';
-                        }
-
-                        
 
 
 

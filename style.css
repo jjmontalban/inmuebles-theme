@@ -64,7 +64,7 @@ Text Domain::   inmuebles
      *    IE on Windows Phone and in iOS.
      */
      html {
-        font-family: sans-serif;
+         : sans-serif;
         /* 1 */
         line-height: 1.15;
         /* 2 */
@@ -618,7 +618,7 @@ Text Domain::   inmuebles
     
     /* -- 02. Flex Grid */
     .row {
-        max-width: 90rem;
+        max-width: 80rem;
         margin-right: auto;
         margin-left: auto;
         display: -webkit-flex;
