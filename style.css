@@ -3977,32 +3977,34 @@ Text Domain::   inmuebles
     justify-content: center;
     align-items: center;
     background-color: #ff6900;
-    padding: 20px;
+    color: white;
+    padding-top: 1%;    
 }
 
 /* Estilos para el formulario */
 .search-form {
     display: flex;
-    justify-content: space-around; /* Distribuye los elementos de manera uniforme */
-    align-items: center;
-    width: 90%; /* Ancho del formulario */
+    justify-content: space-around; 
+    width: 60%; 
 }
 
-/* Estilos para el contenedor del formulario */
-.search-container .search-form select,
-.search-container .search-form input[type="submit"] {
+.search-container .search-form select {
     width: 30%;
-    height: 40px;
+    min-width: 175px;
+    border-radius: 5px;
+    text-align: center; 
+}
+
+.search-container .search-form input[type="submit"] {
+    width: 20%;
+    
+    height: 50px;
     border: 1px solid grey;
     border-radius: 5px;
-    padding: 5px;
-    cursor: pointer;
     transition: background-color 0.3s, color 0.3s, border 0.3s;
-    margin-bottom: 0;
-    text-align: center; /* Centra el texto dentro de los selects */ 
-         /* Centra el texto verticalmente estableciendo la misma altura que la altura del elemento */
-        font-size: 16px; 
-
+    height: 2.64211rem;
+    margin: 0 0 0.84211rem;
+    padding: 0.42105rem;
 }
 
 .search-container .search-form input[type="submit"]:hover {
@@ -4011,12 +4013,6 @@ Text Domain::   inmuebles
     color: white;
 }
 
-/* Estilos para el título */
-.search-title {
-    text-align: center; /* Centra el texto horizontalmente */
-    color: white;
-    font-size: 1.5em;
-}
 
 /* Vista para móviles */
 /* Estilos para dispositivos de pantalla pequeña */
@@ -4030,6 +4026,7 @@ Text Domain::   inmuebles
     .search-form input[type="submit"] {
         width: 100% !important;
         margin-bottom: 10px;
+        min-width: 175px;
     }
 }
 
