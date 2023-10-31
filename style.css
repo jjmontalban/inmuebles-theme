@@ -1,13 +1,13 @@
 /*
-Theme name:     Inmuebles Theme
-Description:    Inmuebles Theme
+Theme name:     Chipicasa Theme
+Description:    real Estate theme form Chipicasa SL
 Version:        1.0
 Author:         JJMontalban
 Author URI:     https://jjmontaban.github.io
 
 License:        GPLv2 or later
 License URI:    http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain::   inmuebles
+Text Domain::   chipicasa
 */
 
 /**
@@ -147,7 +147,7 @@ Text Domain::   inmuebles
          * 2. Correct the odd `em` font sizing in all browsers.
          */
     pre {
-        font-family: monospace, monospace;
+        font-family: 'Source Serif 4', serif;
         /* 1 */
         font-size: 1em;
         /* 2 */
@@ -213,7 +213,7 @@ Text Domain::   inmuebles
     code,
     kbd,
     samp {
-        font-family: monospace, monospace;
+        font-family: 'Source Serif 4', serif;
         /* 1 */
         font-size: 1em;
         /* 2 */
@@ -304,7 +304,7 @@ Text Domain::   inmuebles
     optgroup,
     select,
     textarea {
-        font-family: sans-serif;
+        font-family: 'Source Serif 4', serif;
         /* 1 */
         font-size: 100%;
         /* 1 */
@@ -542,7 +542,7 @@ Text Domain::   inmuebles
         margin: 0;
         padding: 0;
         background: #fefefe;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+        font-family: 'Source Serif 4', serif;
         font-weight: normal;
         line-height: 2.2;
         color: #333;
@@ -1576,7 +1576,7 @@ Text Domain::   inmuebles
     h4, .h4,
     h5, .h5,
     h6, .h6 {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+        font-family: 'Source Serif 4', serif;
         font-style: normal;
         font-weight: bold;
         color: inherit;
@@ -1757,7 +1757,7 @@ Text Domain::   inmuebles
         padding: 0.10526rem 0.26316rem 0.05263rem;
         border: 1px solid #cacaca;
         background-color: #e6e6e6;
-        font-family: Consolas, "Liberation Mono", Courier, monospace;
+        font-family: 'Source Serif 4', serif;
         font-weight: normal;
         color: #333;
     }
@@ -1766,7 +1766,7 @@ Text Domain::   inmuebles
         margin: 0;
         padding: 0.10526rem 0.21053rem 0;
         background-color: #e6e6e6;
-        font-family: Consolas, "Liberation Mono", Courier, monospace;
+        font-family: 'Source Serif 4', serif;
         color: #333;
     }
     
@@ -4398,7 +4398,7 @@ Text Domain::   inmuebles
   }
 
 
-/**  --  18 Swiper -- **/
+/**  --  18 Inmuebles -- **/
 
   .inmuebles-details {
     display: flex; /* Hacer que los hijos (galería y contenido) se muestren en filas (default) */

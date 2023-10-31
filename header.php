@@ -15,11 +15,6 @@
 <body>
 <header class="site-header">
 
-	<div class="site-branding">
-		<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-		<p class="site-description"><?php bloginfo( 'description' ); ?></p>
-	</div>
-
 	<div class="navigation-main-menu">
 		<div class="navigation-wrap">
 			<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php _e( 'Top Menu', 'inmuebles' ); ?>">
@@ -47,11 +42,17 @@
 		</div>
 	</div>
 	
-	<!-- No mostrar en singles -->
+	<!-- Formulario de búsqueda. No mostrar en singles -->
 	<?php if (!is_singular('inmueble')): ?>
 		<?php get_search_form( );  ?>
 	<?php endif; ?>
 
+	<div class="site-branding">
+		<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+		<p class="site-description"><?php bloginfo( 'description' ); ?></p>
+	</div>
+
+	
 </header>
 
 <div id="content" class="row">
