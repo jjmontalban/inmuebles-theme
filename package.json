@@ -1,0 +1,27 @@
+{
+  "name": "chipicasa-theme",
+  "version": "1.0.0",
+  "description": "Tema Wordpress para Chipicasa SL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjmontalban/inmuebles-theme.git"
+  },
+  "author": "JJMontalban",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jjmontalban/inmuebles-theme/issues"
+  },
+  "homepage": "https://github.com/jjmontalban/inmuebles-theme#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-purgecss": "^5.0.0"
+  },
+  "dependencies": {
+    "gulp-sourcemaps": "^3.0.0",
+    "vinyl-sourcemaps-apply": "^0.2.1"
+  }
+}
