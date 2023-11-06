@@ -2,10 +2,12 @@
 
 <?php 
 
-// Definir un array asociativo para mapear valores de los tipos de inmueble
+    // Definir un array asociativo para mapear valores de los tipos de inmueble
     global $tipos_inmueble_map;
+    global $zonas_inmueble_map;
 
     $tipo_inmueble = get_post_meta(get_the_ID(), 'tipo_inmueble', true);
+    $zona_inmueble = get_post_meta(get_the_ID(), 'zona_inmueble', true);
     $campos = obtener_campos_inmueble($post->ID);
 
 ?>
@@ -55,6 +57,7 @@
                 <!-- Descripción -->
                 <?php if ($campos['descripcion'] ?? '') : ?>
                     <div class="inmueble-description">
+                        <p>Zona: <?php echo $zonas_inmueble_map[$zona_inmueble] ?? ''; ?></p>
                         <p><?php echo $campos['descripcion'] ?? ''; ?></p>
                     </div>
                 <?php endif; ?>

@@ -4401,142 +4401,212 @@ Text Domain::   chipicasa
 /**  --  18 Inmuebles -- **/
 
   .inmuebles-details {
-    display: flex; /* Hacer que los hijos (galería y contenido) se muestren en filas (default) */
-    gap: 20px; /* Espacio entre las columnas */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra ligera */
-    transition: box-shadow 0.3s ease; /* Transición suave para el efecto hover */
-    cursor: pointer; /* Cambia el cursor a mano cuando pasa por encima */
-    border-radius: 0.25rem; /* Ajusta este valor según tus preferencias */
-    overflow: hidden; /* Esto asegura que los contenidos internos no sobresalgan fuera del borde redondeado */
+    display: flex; 
+    gap: 20px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    transition: box-shadow 0.3s ease; 
+    cursor: pointer; 
+    border-radius: 0.25rem;
+    overflow: hidden;
     
 }
 
 .inmuebles-gallery img {
-    border-radius: 0.25rem 0 0 0.25rem; /* Esto redondeará solo las esquinas izquierdas de las imágenes */
+    border-radius: 0.25rem 0 0 0.25rem;
 }
 
 
-/* Específicamente para los títulos, descripciones, etc., si quieres asignarles un color diferente */
 .inmuebles-details p, .inmuebles-details span {
-    color: #333; /* Cambia esto al color que prefieras, puse negro como ejemplo */
+    color: #333;
 }
 
-/* Efecto al pasar el cursor por encima */
 .inmuebles-details:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
 }
 
-/* Galería */
 .inmuebles-gallery {
-    flex: 1; /* Tomará la mitad del espacio disponible */
-    max-width: 33.33%; /* Limitar al 50% del ancho del contenedor */
+    flex: 1; 
+    max-width: 33.33%; 
 }
 
-/* Contenido */
 .inmuebles-content {
-    flex: 1; /* Tomará la mitad del espacio disponible */
-    max-width: 66.66%; /* Limitar al 50% del ancho del contenedor */
-    padding: 10px; /* Espaciado interno para que el contenido no esté pegado a los bordes */
+    flex: 1; 
+    max-width: 66.66%; 
+    padding: 10px; 
 }
 
-/* Título del inmueble */
 .inmuebles-content h2 {
     font-size: 24px;
     margin-bottom: 10px;
 }
 
-/* Precio */
 .inmuebles-price {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 0px;
 }
 
-/* Características del inmueble (habitaciones, metros cuadrados) */
 .inmuebles-features {
     display: flex;
-    gap: 10px; /* Espacio entre elementos */
+    gap: 10px;
     margin-bottom: 10px;
 }
 
-/* Descripción */
 .inmuebles-description p {
     margin-bottom: 10px;
 }
 
-/* Adaptable para dispositivos móviles */
 @media (max-width: 768px) {
     .inmuebles-details {
-        flex-direction: column; /* Cambiar a diseño de una sola columna para móviles */
+        flex-direction: column; 
     }
     .inmuebles-gallery, .inmuebles-content {
-        max-width: 100%; /* En móviles, que ocupe todo el ancho disponible */
+        max-width: 100%;
     }
 }
 
-/* Contenedor principal del inmueble */
 .inmueble-details {
     display: flex;
-    flex-direction: column; /* Se asegura que todos los elementos estén en una sola columna */
-    align-items: center; /* Centra todo en la columna */
-
-
-    gap: 20px; /* Espacio entre las columnas */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra ligera */
-    transition: box-shadow 0.3s ease; /* Transición suave para el efecto hover */
-    cursor: pointer; /* Cambia el cursor a mano cuando pasa por encima */
-    border-radius: 0.25rem; /* Ajusta este valor según tus preferencias */
+    flex-direction: column; 
+    align-items: center; 
+    padding: 5%;
+    gap: 20px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    transition: box-shadow 0.3s ease; 
+    cursor: pointer; 
+    border-radius: 0.25rem; 
 }
 
-/* Galería */
 .inmueble-gallery {
-    flex: 1; /* Tomará la mitad del espacio disponible */
-    max-width: 100%; /* Limitar al 50% del ancho del contenedor */
+    flex: 1;
+    max-width: 100%;
 }
 
 
 .inmueble-gallery .swiper {
-    width: 80%; /* Ajusta según tus necesidades */
+    width: 80%;
     margin-bottom: 20px;
 }
 
-/* Título */
 .inmueble-content h2 {
-    font-size: 1.5em; /* Hace que el título sea más pequeño */
+    font-size: 1.5em;
     margin-bottom: 20px;
 }
 
-/* Precio */
 .inmueble-price {
-    font-size: 2em; /* Hace que el precio sea más grande */
+    font-size: 2em;
     margin-bottom: 20px;
 }
 
-/* Características */
 .inmueble-features {
     display: flex;
-    justify-content: space-between; /* Espacia los elementos */
-    width: 80%; /* Ajusta según tus necesidades */
+    justify-content: space-between; 
+    width: 80%;
     margin-bottom: 20px;
 }
 
-/* Descripción */
 .inmueble-description {
     margin-bottom: 20px;
 }
 
-/* Contenedor para las dos listas en la última fila */
 .column-list-container {
     display: flex;
     justify-content: space-between;
-    width: 80%; /* Ajusta según tus necesidades */
+    width: 80%;
     margin-bottom: 20px;
 }
 
-/* Cada una de las listas */
 .column-list {
-    width: 45%; /* Ajusta según tus necesidades */
+    width: 45%;
 }
 
 
+/* front-page */
+.latest-inmuebles .inmueble-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.inmueble-item {
+    width: 32%; 
+    margin-bottom: 20px;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    transition: box-shadow 0.3s ease; 
+}
+
+
+.info-item {
+    width: 48%;
+    display: flex;
+    align-items: center;
+    padding-left: 30px; 
+    padding-right: 30px;
+    box-sizing: border-box;
+}
+
+.inmueble-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+
+.info-item img {
+    margin-right: 10px;
+}
+
+.inmueble-info .info-item:nth-child(odd) {
+    justify-content: flex-start;
+}
+
+.inmueble-info .info-item:nth-child(even) {
+    justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+    .inmueble-item {
+        width: 100%;
+    }
+    .info-item {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+}
+
+.btn-inmueble {
+    display: block;
+    background-color: #333;
+    color: #fff;
+    font-size: 0.8em;
+    width: 50%; 
+    margin-left: 25%; 
+    text-align: center;
+    padding: 5px 10px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    margin-bottom: 4%;
+}
+
+.btn-inmueble:hover {
+    color: #fff;
+    background-color: #ff6900;
+}
+
+.inmueble-precio {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    font-weight: bold;
+}
+
+.latest-inmuebles {
+    text-align: center;
+}
   
