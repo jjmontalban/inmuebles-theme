@@ -38,46 +38,6 @@ require 'inc/templates.php';
 
 
 
-
-
-/**
- * @snippet      Menús de administración que SÍ se ven - El resto desaparecen 
- * @author       https://ayudawp.com/ocultar-menus-admin/
- */
-
- /* add_action('admin_init', 'ayudawp_admin_init');
- function ayudawp_admin_init()
- {
-     // Verificar si el usuario actual es un administrador
-     if (!current_user_can('administrator')) {
-         // Menús que se quedan para el rol de administrador
-         $menus_to_stay = array(
-             // Escritorio
-             'index.php',
-             // Medios
-             'upload.php',
-             // Usuarios
-             'users.php',
-             //CPT Inmueble
-             'edit.php?post_type=inmueble',
-             // Feed de idealista
-             'admin.php?page=idealista-properties-feed',
-         );
- 
-         foreach ($GLOBALS['menu'] as $key => $value) {
-             if (!in_array($value[2], $menus_to_stay)) {
-                 remove_menu_page($value[2]);
-             }
-         }
-        
-     }
- } */
- 
-
- 
-
-
-
  /**
  * @snippet      Custom Login 
  * @author       https://codex.wordpress.org/Customizing_the_Login_Form
@@ -137,30 +97,3 @@ function redirigir_gestor_a_pagina_personalizada( $user_login, $user ) {
     }
 }
 add_action( 'wp_login', 'redirigir_gestor_a_pagina_personalizada', 10, 2 );
-
-
-
-/* ocultar_cosas_para_no_administradores */
-
-function ocultar_avisos_para_no_administradores() {
-    if (!current_user_can('administrator')) {
-        remove_action('admin_notices', 'my_admin_notice');
-
-        // Agrega CSS personalizado para ocultar elementos adicionales
-        echo '<style>
-            
-            #wp-admin-bar-comments,
-            #wp-admin-bar-new-content, 
-            #wp-admin-bar-archive, 
-            #wp-admin-bar-edit-profile, 
-            #wp-admin-bar-wp-logo, 
-            .woocommerce-layout__activity-panel,
-            #screen-meta-links {
-
-                display: none !important;
-            }
-
-            </style>';
-    }
-}
-add_action('admin_init', 'ocultar_avisos_para_no_administradores');
