@@ -1,7 +1,6 @@
 <?php
 /**
  * Template Name: Full width
- * Template Post Type: post
  */
 ?>
 <?php get_header(); ?>

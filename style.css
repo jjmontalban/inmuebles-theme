@@ -951,6 +951,77 @@ Text Domain::   chipicasa
        margin-bottom: 3rem;
        overflow-wrap: break-word;
    }
+
+   .site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Para ajustar el espacio entre los elementos */
+	background-color: #ff6900;
+}
+
+.logo {
+    /* margin-right: 20px; */ 
+	padding-left: 10px;
+}
+
+/* Ajustar tamaño del logo */
+.logo img {
+    width: 150px; 
+    height: auto;
+}
+
+.navigation-main-menu {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.accordion-content {
+    display: none;
+}
+
+.mobile-menu-toggle {
+    display: none;
+}
+
+/* Estilos para el menú móvil cuando se muestra */
+.accordion-content {
+    display: none;
+    width: 100%; 
+    text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+    .mobile-menu-toggle {
+        display: block;
+        text-align: right;
+    }
+
+    .mobile-menu-toggle .accordion-toggle {
+        background-color: transparent;
+        width: 50px;
+        /* Otros estilos necesarios aquí */
+    }
+}
+
+/* Estilos adicionales para el menú móvil */
+.mobile-menu-wrapper {
+    width: 100%;
+    text-align: center;
+}
+
+.accordion-content {
+    display: none;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px; /* Espacio entre el icono y el menú */
+}
+
+.accordion-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+}
    
    /* -- 09. Footer */
    .footer {
@@ -996,7 +1067,7 @@ Text Domain::   chipicasa
    
    /* -- 10. Navigation */
    .navigation-main-menu {
-       background: #333;
+       background: #ff6900;
        font-size: 1rem;
        position: relative;
    }

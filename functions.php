@@ -97,3 +97,12 @@ function redirigir_gestor_a_pagina_personalizada( $user_login, $user ) {
     }
 }
 add_action( 'wp_login', 'redirigir_gestor_a_pagina_personalizada', 10, 2 );
+
+
+
+function ultimos_inmuebles_shortcode() {
+    ob_start();
+    get_template_part( 'template-parts/ultimos-inmuebles' );
+    return ob_get_clean();
+}
+add_shortcode('ultimos_inmuebles', 'ultimos_inmuebles_shortcode');

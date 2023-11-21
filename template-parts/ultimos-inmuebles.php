@@ -1,11 +1,3 @@
-<?php
-/**
- * Template Name: Front page
- */
-?>
-
-<?php get_header(); ?>
-<main id="main" class="columns large-12 small-12">
     <h3 class="latest-inmuebles">Últimos inmuebles añadidos</h3>
     <section class="latest-inmuebles">
         <?php
@@ -61,5 +53,3 @@
             </div>
         <?php endif; wp_reset_postdata(); ?>
     </section>
-</main>
-<?php get_footer(); ?>
