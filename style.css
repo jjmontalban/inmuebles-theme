@@ -956,7 +956,7 @@ Text Domain::   chipicasa
     display: flex;
     align-items: center;
     justify-content: space-between; /* Para ajustar el espacio entre los elementos */
-	background-color: #ff6900;
+	background-color: #eb5d0b;
 }
 
 .logo {
@@ -1067,7 +1067,7 @@ Text Domain::   chipicasa
    
    /* -- 10. Navigation */
    .navigation-main-menu {
-       background: #ff6900;
+       background: #eb5d0b;
        font-size: 1rem;
        position: relative;
    }
@@ -1426,7 +1426,7 @@ Text Domain::   chipicasa
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   background-color: #ff6900;
+   background-color: #eb5d0b;
    color: white;
    padding-top: 1%;    
 }
@@ -1458,7 +1458,7 @@ Text Domain::   chipicasa
 }
 
 .search-container .search-form input[type="submit"]:hover {
-   background-color: #ff6900;
+   background-color: #eb5d0b;
    border-color: white;
    color: white;
 }
@@ -1804,7 +1804,7 @@ Text Domain::   chipicasa
 
 .btn-inmueble:hover {
    color: #fff;
-   background-color: #ff6900;
+   background-color: #eb5d0b;
 }
 
 .inmueble-precio {

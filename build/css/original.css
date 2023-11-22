@@ -3976,7 +3976,7 @@ Text Domain::   chipicasa
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #ff6900;
+    background-color: #eb5d0b;
     color: white;
     padding-top: 1%;    
 }
@@ -4008,7 +4008,7 @@ Text Domain::   chipicasa
 }
 
 .search-container .search-form input[type="submit"]:hover {
-    background-color: #ff6900;
+    background-color: #eb5d0b;
     border-color: white;
     color: white;
 }
@@ -4595,7 +4595,7 @@ Text Domain::   chipicasa
 
 .btn-inmueble:hover {
     color: #fff;
-    background-color: #ff6900;
+    background-color: #eb5d0b;
 }
 
 .inmueble-precio {
