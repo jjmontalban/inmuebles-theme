@@ -16,13 +16,13 @@
             <option value="">Todos los inmuebles</option>
             <?php
             // Obtén la lista de términos de la taxonomía 'tipo_inmueble'
-            $terms = get_terms('tipo_inmueble');
-
-            if (!empty($terms) && !is_wp_error($terms)) {
-                foreach ($terms as $term) {
-                    echo '<option value="' . esc_attr($term->slug) . '">' . esc_html($term->name) . '</option>';
+            /* $terms = get_terms('tipo_inmueble'); */
+            global $tipos_inmueble_map;
+            /* if (!empty($terms) && !is_wp_error($terms)) { */
+                foreach ($tipos_inmueble_map  as $slug => $name) {
+                    echo '<option value="' . esc_attr($slug) . '">' . esc_html($name) . '</option>';
                 }
-            }
+           /*  } */
             ?>
         </select>
 
