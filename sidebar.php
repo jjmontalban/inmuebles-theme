@@ -1,12 +1,11 @@
 <?php if ( ! is_page() ) : ?>
 
-		<div class="sidebar columns large-3 small-12">
+		<div class="columns large-3 small-12">
 
 			<aside class="sidebar">
 
 				<?php dynamic_sidebar( 'sidebar-widgets' ); ?>
-
-				<h4>Solicita más Información</h4>
+				<h5>Solicita más Información</h5>
 				<form action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="post" id="formulario-contacto">
 					<input type="hidden" name="action" value="procesar_formulario_contacto">
 					<?php if ( is_singular('inmueble') ): ?>

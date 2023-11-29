@@ -1488,12 +1488,27 @@ Text Domain::   chipicasa
    /* -- 14. Sidebar */
    /* -- 14.1. Sidebar */
    .sidebar {
-       font-size: 90%;
+        font-size: 90%;
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        padding: 5%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+        transition: box-shadow 0.3s ease; 
+        cursor: pointer; 
+        border-radius: 0.25rem; 
+        position: fixed;
+        top:  0.25rem;  /* Ajusta esta cantidad según tu diseño */
    }
+   .sidebar h5 {
+    text-align: center;
+    margin-bottom: 0.25rem; /* Para eliminar cualquier margen adicional */
+  }
+  
    
-   .sidebar .widget {
+   /* .sidebar .widget {
        margin-bottom: 2rem;
-   }
+   } */
    
    .sidebar .widget-title {
        margin-bottom: 1rem;
@@ -1679,7 +1694,6 @@ Text Domain::   chipicasa
    flex-direction: column; 
    align-items: center; 
    padding: 5%;
-   gap: 20px; 
    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
    transition: box-shadow 0.3s ease; 
    cursor: pointer; 
@@ -1721,7 +1735,7 @@ Text Domain::   chipicasa
 .column-list-container {
    display: flex;
    justify-content: space-between;
-   width: 80%;
+   width: 100%;
    margin-bottom: 20px;
 }
 
