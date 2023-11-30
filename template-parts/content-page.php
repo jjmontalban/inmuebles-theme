@@ -2,7 +2,7 @@
     <header>
         <?php if ( has_post_thumbnail() ): ?>
             <div class="featured-image">
-                <?php the_post_thumbnail( 'featured-page' ); ?>
+                <?php the_post_thumbnail( 'full' ); ?>
             </div>
         <?php endif; ?>
         <h1 class="post-title"><?php the_title(); ?></h1>

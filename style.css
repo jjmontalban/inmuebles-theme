@@ -960,14 +960,13 @@ Text Domain::   chipicasa
 }
 
 .logo {
-    /* margin-right: 20px; */ 
-	padding-left: 10px;
+	padding: 10px;
 }
 
 /* Ajustar tamaño del logo */
 .logo img {
     width: 150px; 
-    height: auto;
+    /* height: auto; */
 }
 
 .navigation-main-menu {
@@ -995,11 +994,12 @@ Text Domain::   chipicasa
     .mobile-menu-toggle {
         display: block;
         text-align: right;
+        padding: 10px;
     }
 
     .mobile-menu-toggle .accordion-toggle {
         background-color: transparent;
-        width: 50px;
+        width: 30px;
         /* Otros estilos necesarios aquí */
     }
 }
@@ -1497,8 +1497,7 @@ Text Domain::   chipicasa
         transition: box-shadow 0.3s ease; 
         cursor: pointer; 
         border-radius: 0.25rem; 
-        position: fixed;
-        top:  0.25rem;  /* Ajusta esta cantidad según tu diseño */
+       
    }
    .sidebar h5 {
     text-align: center;
