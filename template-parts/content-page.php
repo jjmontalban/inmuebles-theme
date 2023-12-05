@@ -21,51 +21,20 @@
 
 
 <style>
-
-    body .type-page .featured-image {
-        width: 100vw;
-        margin-left: calc(-50vw + 50%);
-       
-
-    }
-
-    body .type-page .featured-image img{
-        width: 100%;
-        min-width: 300px; /* Ajusta el valor según sea necesario */
-        height: auto;
-        object-fit: cover;
-    }
-    
-    #content{
+    #content {
         margin-top: 0px !important;
     }
-    
-    body .type-page .post-title::after {
-        background: 0 !important;
+    #content article.hentry {
+        margin-bottom: 0;
+        padding-bottom: 0;
     }
 
-    body .type-page .post-title {
-        margin-bottom: 0px  !important;
-        padding-bottom: 0px !important;
+    body .type-page .featured-image{
+        margin-bottom: 0;
     }
 
-    body .type-page .title-container {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        z-index: 2;
-        color: white;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.99); /* Ajusta el sombreado según sea necesario */
+    #content article.hentry header {
+        padding: 0;
+        margin-bottom: 0;
     }
-
-    
-
-    @media screen and (max-width: 767px) {
-        body .type-page .title-container {
-        width: 85%;
-        top: 60%;
-        }
-}
 </style>
