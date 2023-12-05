@@ -60,7 +60,7 @@
                     <!-- Descripción -->
                     <?php if ($campos['descripcion']) : ?>
                         <div class="inmuebles-description">
-                            <p><?php echo $campos['descripcion']; ?></p>
+                            <p><?php echo substr($campos['descripcion'], 0, 150) . '...'; ?></p>
                         </div>
                     <?php endif; ?>
                 </div>

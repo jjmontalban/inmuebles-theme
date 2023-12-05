@@ -7,7 +7,7 @@
         <?php endif; ?>
         <div class="title-container">
             <h1 class="post-title"><?php the_title(); ?></h1>
-            <p class="slogan"><?php echo get_post_meta(get_the_ID(), '_eslogan', true); ?></p>
+            <p class="slogan"><?php echo get_post_meta(get_the_ID(), '_eslogan', true); ?></p>  
         </div>
     </header>
     <div class="entry-content">
