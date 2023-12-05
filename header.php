@@ -16,7 +16,9 @@
 <body>
 <header class="site-header">
         <div class="logo">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Logo">
+            <a href="<?php echo esc_url(home_url('/')); ?>" id="logo-link">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Logo">
+            </a>
         </div>
 
         <div class="navigation-main-menu">

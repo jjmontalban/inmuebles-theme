@@ -1481,14 +1481,11 @@ body .type-page .title-container {
        
    }
    .sidebar h5 {
-    text-align: center;
+    text-align: left;
     margin-bottom: 0.25rem; /* Para eliminar cualquier margen adicional */
+    font-size: 18px;
   }
   
-   
-   /* .sidebar .widget {
-       margin-bottom: 2rem;
-   } */
    
    .sidebar .widget-title {
        margin-bottom: 1rem;
