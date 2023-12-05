@@ -1030,6 +1030,7 @@ Text Domain::   chipicasa
        color: #f1f1f1;
        background: #333;
        color: #fefefe;
+       text-align: center;
    }
    
    .footer a {
@@ -1743,92 +1744,78 @@ Text Domain::   chipicasa
 }
 
 
-/* front-page */
+/* shortcode latest inmuebles */
 .latest-inmuebles .inmueble-row {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+ }
+ 
+ .inmueble-item {
+    width: 32%;
+    margin-bottom: 20px;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+    overflow: hidden; /* Evita que las imágenes desborden el contenedor */
+    height: 400px; /* Ajusta la altura según tus necesidades */
 }
 
-
-.inmueble-item {
-   width: 32%; 
-   margin-bottom: 20px;
-   position: relative;
-   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
-   transition: box-shadow 0.3s ease; 
+.inmueble-item img {
+    width: 100%;
+    height: 40%;
+    object-fit: cover; /* Ajusta el comportamiento de la imagen */
+    margin-bottom: inherit;
 }
+ 
+ .inmueble-precio {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    font-weight: bold;
+    padding: 5px 10px; /* Aumenta el padding izquierdo y derecho */
+ }
+ 
 
-
-.info-item {
-   width: 48%;
-   display: flex;
-   align-items: center;
-   padding-left: 30px; 
-   padding-right: 30px;
-   box-sizing: border-box;
-}
-
-.inmueble-info {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: space-between;
-   margin-bottom: 20px;
-   position: relative;
-}
-
-
-.info-item img {
-   margin-right: 10px;
-}
-
-.inmueble-info .info-item:nth-child(odd) {
-   justify-content: flex-start;
-}
-
-.inmueble-info .info-item:nth-child(even) {
-   justify-content: flex-end;
-}
-
-@media (max-width: 768px) {
-   .inmueble-item {
-       width: 100%;
-   }
-   .info-item {
-       width: 100%;
-       justify-content: flex-start;
-   }
-
-}
-
-.btn-inmueble {
-   display: block;
-   background-color: #333;
-   color: #fff;
-   font-size: 0.8em;
-   width: 50%; 
-   margin-left: 25%; 
-   text-align: center;
-   padding: 5px 10px;
-   text-decoration: none;
-   transition: background-color 0.3s;
-   margin-bottom: 4%;
-}
-
-.btn-inmueble:hover {
-   color: #fff;
-   background-color: #eb5d0b;
-}
-
-.inmueble-precio {
-   position: absolute;
-   top: 10px;
-   left: 10px;
-   background: rgba(255, 255, 255, 0.7);
-   font-weight: bold;
-}
-
-.latest-inmuebles {
-   text-align: center;
-}
+ 
+ .inmueble-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    position: relative;
+ }
+ 
+ @media (max-width: 768px) {
+    .inmueble-item {
+        width: 100%;
+    }
+    .info-item {
+        width: 100%;
+    }
+ }
+ 
+ .btn-inmueble {
+    display: block;
+    background-color: #333;
+    color: #fff;
+    font-size: 0.8em;
+    width: 50%;
+    margin-left: 25%;
+    text-align: center;
+    padding: 5px 10px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    margin-bottom: 4%;
+ }
+ 
+ .btn-inmueble:hover {
+    color: #fff;
+    background-color: #eb5d0b;
+ }
+ 
+ .latest-inmuebles {
+    text-align: center;
+ }
  

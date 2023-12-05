@@ -106,3 +106,40 @@ function ultimos_inmuebles_shortcode() {
     return ob_get_clean();
 }
 add_shortcode('ultimos_inmuebles', 'ultimos_inmuebles_shortcode');
+
+
+
+
+  /**
+ * @snippet       eslogan
+ */
+  
+///////////////////////////////
+// Función para agregar el metabox
+function agregar_metabox_eslogan() {
+    add_meta_box('eslogan-metabox', 'Eslogan', 'mostrar_metabox_eslogan', 'page', 'normal', 'high');
+}
+
+// Función para mostrar el contenido del metabox
+function mostrar_metabox_eslogan($post) {
+    $eslogan = get_post_meta($post->ID, '_eslogan', true);
+    ?>
+    <label for="eslogan">Eslogan:</label>
+    <input type="text" id="eslogan" name="eslogan" value="<?php echo esc_attr($eslogan); ?>" style="width: 100%;">
+    <?php
+}
+
+// Función para guardar el valor del metabox
+function guardar_eslogan($post_id) {
+    if (array_key_exists('eslogan', $_POST)) {
+        update_post_meta(
+            $post_id,
+            '_eslogan',
+            sanitize_text_field($_POST['eslogan'])
+        );
+    }
+}
+
+// Acciones para agregar el metabox y guardar el valor
+add_action('add_meta_boxes', 'agregar_metabox_eslogan');
+add_action('save_post', 'guardar_eslogan');

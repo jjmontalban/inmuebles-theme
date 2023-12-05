@@ -30,24 +30,11 @@
                         </div>
                         <h5><?php echo $tipos_inmueble_map[$campos['tipo_inmueble']] . ' en ' . $campos['nombre_calle'] . ', ' . $campos['localidad']; ?></h5>
                         <div class="inmueble-info">
-                            <div class="info-item">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/m_construidos.svg" alt="Metros Construidos">
-                                <span><?php echo $campos['m_construidos']; ?></span>
-                            </div>
-                            <div class="info-item">
-                                <img class="icono" src="<?php echo get_template_directory_uri(); ?>/img/m_utiles.svg" alt="Metros Útiles">
-                                <span><?php echo $campos['m_utiles']; ?></span>
-                            </div>
-                            <div class="info-item">
-                                <img class="icono" src="<?php echo get_template_directory_uri(); ?>/img/num_dormitorios.svg" alt="Dormitorios">
-                                <span><?php echo $campos['num_dormitorios']; ?></span>
-                            </div>
-                            <div class="info-item">
-                                <img class="icono" src="<?php echo get_template_directory_uri(); ?>/img/num_banos.svg" alt="Baños">
-                                <span><?php echo get_post_meta(get_the_ID(), 'num_banos', true); ?></span>
-                            </div>
+                            <span><?php echo $campos['m_construidos'] . ' m2'; ?></span>
+                            <span><?php echo $campos['num_dormitorios'] . ' Dorm'; ?></span>
+                            <span><?php echo $campos['num_dormitorios'] . ' Baño'; ?></span>
                         </div>
-                        <a href="   <?php the_permalink(); ?>" class="btn-inmueble">Ver inmueble</a>
+                        <a href="<?php the_permalink(); ?>" class="btn-inmueble">Ver inmueble</a>
 
 
                     </div>
