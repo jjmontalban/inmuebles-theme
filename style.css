@@ -1390,18 +1390,6 @@ body .type-page .title-container {
 }
 
 
-.form-shortcode-container {
-    /* Estilos para el contenedor del shortcode */
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    position: absolute;
-    top: 37rem;
-    width: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 
 
 
