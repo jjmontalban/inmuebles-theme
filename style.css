@@ -1096,6 +1096,7 @@ Text Domain::   chipicasa
        clear: both;
        width: auto;
        display: block;
+       margin-right: 4%;
    }
    
    .main-navigation ul {
