@@ -42,47 +42,38 @@
 
     
    
-   body .type-page .featured-image {
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-   
-
-}
-
-body .type-page .featured-image img{
-    width: 100%;
-    min-width: 300px; /* Ajusta el valor según sea necesario */
-    /* height: auto; */
-    object-fit: cover;
-    max-height: 50rem;
-}
-
-body .type-page .post-title::after {
-    background: 0 !important;
-}
-
-body .type-page .post-title {
-    margin-bottom: 0px  !important;
-    padding-bottom: 0px !important;
-}
-
-body .type-page .title-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 2;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.99);
-    width: 85%; /* Añade un ancho para todas las pantallas */
-}
-
-
-@media screen and (max-width: 767px) {
-    body .type-page .title-container {
-    top: 60%;
+    body .type-page .featured-image {
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
     }
-}
+
+    body .type-page .featured-image img {
+        width: 100%;
+        min-width: 300px; /* Ajusta el valor según sea necesario */
+        /* height: auto; */
+        object-fit: cover;
+        max-height: 50rem;
+    }
+
+    body .type-page .post-title::after {
+        background: 0 !important;
+    }
+
+    body .type-page .post-title {
+        margin-bottom: 0px  !important;
+        padding-bottom: 0px !important;
+    }
+
+    body .type-page .title-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 2;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.99);
+        width: 85%; /* Añade un ancho para todas las pantallas */
+    }
 
 </style>
