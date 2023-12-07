@@ -143,3 +143,14 @@ function guardar_eslogan($post_id) {
 // Acciones para agregar el metabox y guardar el valor
 add_action('add_meta_boxes', 'agregar_metabox_eslogan');
 add_action('save_post', 'guardar_eslogan');
+
+
+ 
+
+  /**
+ * @snippet       nombre de remintente email CRM
+ */
+function cambiar_nombre_remitente_email($original_email_from) {
+    return 'CRM chipicasa.com';
+}
+add_filter('wp_mail_from_name', 'cambiar_nombre_remitente_email');
