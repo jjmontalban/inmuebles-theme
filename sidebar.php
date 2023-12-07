@@ -2,7 +2,9 @@
 
 	<div class="columns large-3 small-12">
         <aside class="sidebar">
-            <?php echo do_shortcode('[formulario_contacto]'); ?>
+            <div class="contact-sidebar">
+                <?php echo do_shortcode('[formulario_contacto]'); ?>
+            </div>
         </aside>
     </div>
 		

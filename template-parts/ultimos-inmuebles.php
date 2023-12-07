@@ -1,5 +1,5 @@
-    <h3 class="latest-inmuebles">Últimos inmuebles añadidos</h3>
-    <section class="latest-inmuebles">
+<section class="latest-inmuebles">
+        <h3>Últimos inmuebles añadidos</h3>
         <?php
         $args = array(
             'post_type' => 'inmueble',
