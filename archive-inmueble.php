@@ -4,18 +4,19 @@
 
     //array asociativo para mapear valores de los tipos de inmueble
     global $tipos_inmueble_map;
-    
-    $tipo_inmueble = get_post_meta(get_the_ID(), 'tipo_inmueble', true);
-
-    //
-    $campos = obtener_campos_inmueble($post->ID);
-
 
 ?>
 
 <main id="main" class="columns large-9 small-12">
     <?php if ( have_posts() ): ?>
         <?php while ( have_posts() ) : the_post() ?>
+        <?php 
+        $tipo_inmueble = get_post_meta(get_the_ID(), 'tipo_inmueble', true);
+
+        //
+        $campos = obtener_campos_inmueble($post->ID);  
+        ?>
+        
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 <!-- Listado de inmueble -->
                  <!-- Detalles de un inmueble -->

@@ -342,9 +342,26 @@
 
                         ?>
 
-                        </div>
                     </div>
                 </div>
+
+                <!-- plano -->
+                <?php 
+                $plano_url = get_post_meta(get_the_ID(), 'plano', true);
+                if ($plano_url) : ?>
+                    <img src="<?php echo esc_url($plano_url); ?>" alt="Plano del inmueble" style="width: 100%;">
+                <?php endif; ?>
+            </div>
+            
+
+
+
+              
+
+                
+           
+                
+
         </article>
         <?php endwhile; ?>
     <?php else: ?>
