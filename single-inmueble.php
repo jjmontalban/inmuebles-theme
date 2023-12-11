@@ -1,6 +1,6 @@
 <?php get_header(); ?>
-
 <?php 
+
 
     // Definir un array asociativo para mapear valores de los tipos de inmueble
     global $tipos_inmueble_map;
@@ -9,6 +9,29 @@
     $tipo_inmueble = get_post_meta(get_the_ID(), 'tipo_inmueble', true);
     $zona_inmueble = get_post_meta(get_the_ID(), 'zona_inmueble', true);
     $campos = obtener_campos_inmueble($post->ID);
+
+    //MAPA
+    function cargar_google_maps() {
+        if (is_page_template('single-inmueble.php')) { // Reemplaza 'single-inmueble.php' con el nombre de tu plantilla si es diferente
+            // Obtener la clave de API almacenada
+            $api_key = get_option('inmuebles_google_maps_api_key', '');
+            // Cargar la biblioteca de Google Maps JavaScript API con la clave y el callback
+            wp_enqueue_script('google-maps', "https://maps.googleapis.com/maps/api/js?key={$api_key}&callback=initMap", array(), null, true);
+        }
+    }
+    add_action('wp_enqueue_scripts', 'cargar_google_maps');
+    
+    // Obtener las coordenadas del inmueble
+    $coordenadas = get_post_meta(get_the_ID(), 'campo_mapa', true);
+    if ($coordenadas) {
+        $coordenadas = explode(',', $coordenadas);
+        $lat = $coordenadas[0];
+        $lng = $coordenadas[1];
+    } else {
+        // Proporciona un valor predeterminado si las coordenadas no están disponibles
+        $lat = 0;
+        $lng = 0;
+    }
 
 ?>
 
@@ -366,6 +389,11 @@
                 if ($plano4_url) : ?>
                     <img src="<?php echo esc_url($plano4_url); ?>" alt="Plano del inmueble" style="width: 100%;">
                 <?php endif; ?>
+
+
+                <!-- Mapa -->
+                <div id="mapa"></div>
+                
             </div>
             
 
@@ -386,8 +414,8 @@
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
 
-    <!-- Initialize Swiper -->
-    <script>
+<script>
+    /* Initialize Swiper */
     var swiper = new Swiper(".mySwiper", {
         cssMode: true,
         navigation: {
@@ -400,4 +428,20 @@
         mousewheel: true,
         keyboard: true,
     });
+
+    // Mapa
+    var map;
+    function initMap() {
+        var location = {lat: <?php echo $lat; ?>, lng: <?php echo $lng; ?>};
+        map = new google.maps.Map(document.getElementById('mapa'), {
+            center: location,
+            zoom: 15
+        });
+        var marker = new google.maps.Marker({
+            position: location,
+            map: map
+        });
+    }
+    
+    
 </script>
