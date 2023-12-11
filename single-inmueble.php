@@ -287,10 +287,10 @@
                         <ul>
                             <?php
                             //Consumo
-                            if ( !empty( $campos['calif_consumo_energ'] ) ) {
-                                echo '<li>Consumo: <strong>' . esc_html( $campos['calif_consumo_energ'] ) . '</strong>';
-                                if ( !empty( $campos['consumo_energ'] ) ) {
-                                    echo esc_html( $campos['consumo_energ'] )  . 'kWh/m² año';
+                            if ( !empty( $campos['calif_consumo'] ) ) {
+                                echo '<li>Consumo: <strong>' . esc_html( $campos['calif_consumo'] ) . '</strong>';
+                                if ( !empty( $campos['consumo'] ) ) {
+                                    echo esc_html( $campos['consumo'] )  . 'kWh/m² año';
                                 }
                                 echo '</li>';
                             }
@@ -300,8 +300,8 @@
                         <ul>
                             <?php
                             //Emisiones
-                            if ( !empty( $campos['cal_emis'] ) ) {
-                                echo '<li>: <strong>' . esc_html( $campos['cal_emis'] ) . '</strong>';
+                            if ( !empty( $campos['calif_emis'] ) ) {
+                                echo '<li>: <strong>' . esc_html( $campos['calif_emis'] ) . '</strong>';
                                 if ( !empty( $campos['emisiones'] ) ) {
                                     echo ' ' . esc_html( $campos['emisiones'] )  . 'kg CO / m2 año';
                                 }
@@ -310,7 +310,7 @@
                             ?>
                             </ul>
                             <?php 
-                            if ( !empty( $campos['calif_consumo_energ'] )){
+                            if ( !empty( $campos['calif_consumo'] )){
                                 echo '<h4>Orientación:</h4>';
                                 foreach ( $campos['orientacion'] as $orientacion ) {
                                     echo '<li>' . esc_html( $orientacion ) . '</li>';
@@ -347,9 +347,24 @@
 
                 <!-- plano -->
                 <?php 
-                $plano_url = get_post_meta(get_the_ID(), 'plano', true);
-                if ($plano_url) : ?>
-                    <img src="<?php echo esc_url($plano_url); ?>" alt="Plano del inmueble" style="width: 100%;">
+                $plano1_url = get_post_meta(get_the_ID(), 'plano1', true);
+                if ($plano1_url) : ?>
+                    <img src="<?php echo esc_url($plano1_url); ?>" alt="Plano del inmueble" style="width: 100%;">
+                <?php endif; ?>
+                <?php 
+                $plano2_url = get_post_meta(get_the_ID(), 'plano2', true);
+                if ($plano2_url) : ?>
+                    <img src="<?php echo esc_url($plano2_url); ?>" alt="Plano del inmueble" style="width: 100%;">
+                <?php endif; ?>
+                <?php 
+                $plano3_url = get_post_meta(get_the_ID(), 'plano3', true);
+                if ($plano3_url) : ?>
+                    <img src="<?php echo esc_url($plano3_url); ?>" alt="Plano del inmueble" style="width: 100%;">
+                <?php endif; ?>
+                <?php 
+                $plano4_url = get_post_meta(get_the_ID(), 'plano4', true);
+                if ($plano4_url) : ?>
+                    <img src="<?php echo esc_url($plano4_url); ?>" alt="Plano del inmueble" style="width: 100%;">
                 <?php endif; ?>
             </div>
             
