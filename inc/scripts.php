@@ -20,7 +20,7 @@ add_action( 'wp_enqueue_scripts', 'chipicasa_add_google_fonts' );
 
 //JAVASCRIPT
 function chipicasa_load_js(){
-	wp_register_script('scripts', get_template_directory_uri() . '/inc/scripts.js', array('jquery'), false, true); 
-	wp_enqueue_script('scripts');
+    wp_register_script('scripts', get_template_directory_uri() . '/inc/scripts.js', array('jquery'), false, true); 
+    wp_enqueue_script('scripts');
 }
 add_action('wp_enqueue_scripts', 'chipicasa_load_js');

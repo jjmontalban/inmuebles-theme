@@ -9,19 +9,8 @@
     $tipo_inmueble = get_post_meta(get_the_ID(), 'tipo_inmueble', true);
     $zona_inmueble = get_post_meta(get_the_ID(), 'zona_inmueble', true);
     $campos = obtener_campos_inmueble($post->ID);
-
-    //MAPA
-    function cargar_google_maps() {
-        if (is_page_template('single-inmueble.php')) { // Reemplaza 'single-inmueble.php' con el nombre de tu plantilla si es diferente
-            // Obtener la clave de API almacenada
-            $api_key = get_option('inmuebles_google_maps_api_key', '');
-            // Cargar la biblioteca de Google Maps JavaScript API con la clave y el callback
-            wp_enqueue_script('google-maps', "https://maps.googleapis.com/maps/api/js?key={$api_key}&callback=initMap", array(), null, true);
-        }
-    }
-    add_action('wp_enqueue_scripts', 'cargar_google_maps');
     
-    // Obtener las coordenadas del inmueble
+    //mapa
     $coordenadas = get_post_meta(get_the_ID(), 'campo_mapa', true);
     if ($coordenadas) {
         $coordenadas = explode(',', $coordenadas);
@@ -32,6 +21,22 @@
         $lat = 0;
         $lng = 0;
     }
+
+    $visibilidad_direccion = get_post_meta(get_the_ID(), 'visibilidad_direccion', true);
+
+
+    // Pasa las coordenadas y la forma de mostrar el mapa de PHP a JavaScript
+    wp_enqueue_script('scripts', get_template_directory_uri() . '/inc/scripts.js', array('jquery'), false, true);
+    $datos_mapa = array(
+        'lat' => $lat,
+        'lng' => $lng,
+        'visibilidad_direccion' => $visibilidad_direccion
+    );
+    wp_localize_script('scripts', 'datos_mapa', $datos_mapa);
+
+    // Encolar el script de Google Maps
+    $api_key = get_option('inmuebles_google_maps_api_key', '');
+    wp_enqueue_script('google-maps', "https://maps.googleapis.com/maps/api/js?key={$api_key}&callback=initMap", array('scripts'), null, true);
 
 ?>
 
@@ -367,8 +372,11 @@
 
                     </div>
                 </div>
-
+                <!-- mapa -->
+                <h4>Mapa</h4>
+                <div id="map" style="height: 400px; width: 100%; margin-bottom: 5%;"></div>
                 <!-- plano -->
+                <h4>Planos</h4>
                 <?php 
                 $plano1_url = get_post_meta(get_the_ID(), 'plano1', true);
                 if ($plano1_url) : ?>
@@ -391,8 +399,6 @@
                 <?php endif; ?>
 
 
-                <!-- Mapa -->
-                <div id="mapa"></div>
                 
             </div>
             
@@ -427,21 +433,7 @@
         },
         mousewheel: true,
         keyboard: true,
-    });
+    }); 
 
-    // Mapa
-    var map;
-    function initMap() {
-        var location = {lat: <?php echo $lat; ?>, lng: <?php echo $lng; ?>};
-        map = new google.maps.Map(document.getElementById('mapa'), {
-            center: location,
-            zoom: 15
-        });
-        var marker = new google.maps.Marker({
-            position: location,
-            map: map
-        });
-    }
-    
     
 </script>
