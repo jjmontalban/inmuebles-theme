@@ -154,3 +154,12 @@ function cambiar_nombre_remitente_email($original_email_from) {
     return 'CRM chipicasa.com';
 }
 add_filter('wp_mail_from_name', 'cambiar_nombre_remitente_email');
+
+
+// Habilitar la carga de archivos SVG
+function permitir_svg_upload( $mimes ) {
+    $mimes['svg'] = 'image/svg+xml';
+    $mimes['svgz'] = 'image/svg+xml';
+    return $mimes;
+}
+add_filter( 'upload_mimes', 'permitir_svg_upload' );
