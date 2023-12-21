@@ -4,11 +4,15 @@
     <?php get_sidebar('footer'); ?>
     <div class="site-info row">
         <div class="columns small-12">
-            <p><?php echo esc_html(get_bloginfo('name')); ?></p>
+            <p>
+                <span>&reg;</span>
+                <?php echo esc_html(date('Y')) . ' ' . esc_html(get_bloginfo('name')); ?>
+            </p>
             <p><?php echo esc_html(get_bloginfo('description')); ?></p>
         </div>
     </div>
 </footer>
+
 
 
 <?php wp_footer(  ); ?>

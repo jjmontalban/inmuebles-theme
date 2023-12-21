@@ -1064,6 +1064,11 @@ Text Domain::   chipicasa
    .footer .site-info {
        padding-bottom: 2rem;
    }
+
+   .footer .site-info p span{
+	    font-size: 2.2em; 
+        vertical-align: -webkit-baseline-middle;
+    }
    
    /* -- 10. Navigation */
    .navigation-main-menu {
