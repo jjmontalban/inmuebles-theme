@@ -1545,9 +1545,10 @@ body .type-page .title-container {
            -webkit-box-flex:1;
            -ms-flex-positive:1;
            flex-grow:1;
-           width:33%;
+           width:100%;
        }
    }
+   
    
    .footer .sidebar section.widget {
        padding-right: 1rem;
