@@ -989,7 +989,7 @@ Text Domain::   chipicasa
     text-align: center;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
     .mobile-menu-toggle {
         display: block;
         text-align: right;
@@ -999,7 +999,6 @@ Text Domain::   chipicasa
     .mobile-menu-toggle .accordion-toggle {
         background-color: transparent;
         width: 30px;
-        /* Otros estilos necesarios aquí */
     }
 }
 
@@ -1027,7 +1026,7 @@ Text Domain::   chipicasa
        font-size: 70%;
        padding-top: 3rem;
        color: #f1f1f1;
-       background: #333;
+       background: #eb5d0b;
        color: #fefefe;
        text-align: center;
    }
@@ -1049,7 +1048,8 @@ Text Domain::   chipicasa
        padding: 1rem 0;
        border-top: 1px solid #e6e6e6;
        margin-top: 1rem;
-       color: #8a8a8a;
+       color: white;
+       font-size: x-large;
    }
    
    .footer .site-info a {
@@ -1354,8 +1354,7 @@ Text Domain::   chipicasa
 
 body .type-page .featured-image img{
     width: 100%;
-    min-width: 300px; /* Ajusta el valor según sea necesario */
-    /* height: auto; */
+    min-width: 300px; 
     object-fit: cover;
     max-height: 50rem;
 }
@@ -1377,7 +1376,7 @@ body .type-page .title-container {
     text-align: center;
     z-index: 2;
     color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.99); /* Ajusta el sombreado según sea necesario */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.99);
 }
 
 
@@ -1532,6 +1531,7 @@ body .type-page .title-container {
        flex-wrap: wrap;
        -ms-flex-wrap: wrap;
        flex-wrap: wrap;
+       box-shadow: none;
    }
    
    .footer .sidebar section.widget {
