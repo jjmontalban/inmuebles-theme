@@ -1373,7 +1373,7 @@ Text Domain::   chipicasa
 
     body .type-page .title-container {
         position: absolute;
-        top: 50%;
+        top: 75%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
@@ -1796,7 +1796,7 @@ Text Domain::   chipicasa
 
     body .type-page .title-container {
         position: absolute;
-        top: 35%;
+        top: 75%;
         left: 50%;
         transform: translateX(-50%);
         text-align: center;
@@ -1808,7 +1808,8 @@ Text Domain::   chipicasa
 
     @media screen and (max-width: 640px) {
         body .type-page .title-container {
-            top: 45%;
+            top: 85%;
+            font: medium;
         }
 
         .title-container .form-shortcode-container {
