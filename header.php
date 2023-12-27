@@ -71,5 +71,4 @@
     });
     </script>
 
-
 	<div id="content" class="row">

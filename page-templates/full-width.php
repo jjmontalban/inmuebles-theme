@@ -37,29 +37,32 @@
     }
 
     body .type-page .title-container {
-        position: absolute;
-        top: 33%;
+        top: 30%;
         left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        z-index: 2;
-        color: white;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0);
         width: 85%; 
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 100%;
     }
-
 
     body .type-page .featured-image img {
         min-height: 20rem;
         min-width: auto;
     }
 
-    
+/* Modificar la posición en dispositivos móviles usando clases de Bootstrap */
+@media (max-width: 1023px) {
+    body .type-page .title-container {
+        position: relative;
+        margin-top: -70%; /* Ajusta la distancia desde arriba */
+    }
+}
+
+
+
+
+
 </style>
 
 
