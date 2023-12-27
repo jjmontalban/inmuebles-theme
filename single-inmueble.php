@@ -432,5 +432,21 @@
         keyboard: true,
     }); 
 
+    /* sticky sidebar */
+    var sidebar = $('.sticky-sidebar');
+    if (sidebar.length > 0) {
+        var sidebarOffset = sidebar.offset().top;
+
+        $(window).scroll(function() {
+            var scrollPos = $(window).scrollTop();
+
+            if (scrollPos >= sidebarOffset) {
+                sidebar.addClass('sticky');
+            } else {
+                sidebar.removeClass('sticky');
+            }
+        });
+    }
+
     
 </script>

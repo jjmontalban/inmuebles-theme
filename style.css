@@ -1503,7 +1503,10 @@ Text Domain::   chipicasa
     }
 
     /* -- 14.1.2 Contact Sidebar */
-
+    .sticky-sidebar{
+        position: sticky;
+        top: 20px; 
+    }
     .contact-sidebar textarea,
     .contact-sidebar input{
     border-radius: 5px;
