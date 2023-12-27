@@ -8,7 +8,10 @@
                 <span>&reg;</span>
                 <?php echo esc_html(date('Y')) . ' ' . esc_html(get_bloginfo('name')); ?>
             </p>
-            <p><?php echo esc_html(get_bloginfo('description')); ?></p>
+            <p>
+                <?php echo esc_html(get_bloginfo('description')); ?>
+                <a href="<?php echo esc_url(get_permalink(3)); ?>">Aviso Legal</a>
+            </p>
         </div>
     </div>
 </footer>

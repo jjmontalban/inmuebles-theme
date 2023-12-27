@@ -1033,33 +1033,28 @@ Text Domain::   chipicasa
    
    .footer a {
        color: #fefefe;
-       font-weight: 700;
    }
-   
-   .footer a:hover, .footer a:focus {
-       color: #e9640c;
-   }
+
    
    .footer h1, .footer h2, .footer h3, .footer h4, .footer h5 {
        color: #fefefe;
    }
    
+   .footer .site-info p{
+        margin-bottom: 0;
+   }
+
    .footer .site-info {
-       padding: 1rem 0;
        border-top: 1px solid #e6e6e6;
        margin-top: 1rem;
        color: white;
-       font-size: x-large;
+       font-size: large;
    }
    
-   .footer .site-info a {
-       color: #8a8a8a;
-       font-weight: 700;
+   .footer .site-info a:hover {
+       color: #fef59a;
    }
    
-   .footer .site-info a:hover, .footer .site-info a:focus {
-       color: #e9640c;
-   }
    
    .footer .site-info {
        padding-bottom: 2rem;
@@ -1547,6 +1542,10 @@ Text Domain::   chipicasa
 
     .footer  .has-text-align-center p{
         margin-bottom: 0px;
+    }
+
+    .footer a:hover{
+        color: #fef59a;
     }
 
 
