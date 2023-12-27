@@ -72,10 +72,4 @@
     </script>
 
 
-
-	<!-- Formulario de búsqueda. No mostrar en singles -->
-	<?php if (!is_singular('inmueble')): ?>
-		<?php get_search_form( );  ?>
-	<?php endif; ?>
-
 	<div id="content" class="row">

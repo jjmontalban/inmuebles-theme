@@ -1,5 +1,5 @@
 <div class="search-container">
-        <h3>Buscar inmueble</h3>
+        <h4>Buscar inmueble</h4>
     <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
         <!-- Limita la búsqueda a los inmuebles --> 
         <input type="hidden" name="post_type" value="inmueble" />
@@ -16,13 +16,10 @@
             <option value="">Todos los inmuebles</option>
             <?php
             // Obtén la lista de términos de la taxonomía 'tipo_inmueble'
-            /* $terms = get_terms('tipo_inmueble'); */
             global $tipos_inmueble_map;
-            /* if (!empty($terms) && !is_wp_error($terms)) { */
                 foreach ($tipos_inmueble_map  as $slug => $name) {
                     echo '<option value="' . esc_attr($slug) . '">' . esc_html($name) . '</option>';
                 }
-           /*  } */
             ?>
         </select>
 

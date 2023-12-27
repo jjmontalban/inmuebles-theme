@@ -1391,48 +1391,46 @@ Text Domain::   chipicasa
 
 
    /* -- 13.10 Search Form */
-   /* Estilos para el contenedor del formulario */
-   /* Estilos para el contenedor del formulario */
     .search-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #eb5d0b;
-    color: white;
-    padding-top: 1%;    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #eb5d0b;
+        color: white;
+        padding-top: 1%;    
     }
 
     /* Estilos para el formulario */
     .search-form {
-    display: flex;
-    justify-content: space-around; 
-    width: 60%; 
+        display: flex;
+        justify-content: space-around; 
+        width: 60%; 
     }
 
     .search-container .search-form select {
-    width: 30%;
-    min-width: 175px;
-    border-radius: 5px;
-    text-align: center; 
+        width: 30%;
+        min-width: 175px;
+        border-radius: 5px;
+        text-align: center; 
     }
 
     .search-container .search-form input[type="submit"] {
-    width: 20%;
-    
-    height: 50px;
-    border: 1px solid grey;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s, border 0.3s;
-    height: 2.64211rem;
-    margin: 0 0 0.84211rem;
-    padding: 0.42105rem;
+        width: 20%;
+        
+        height: 50px;
+        border: 1px solid grey;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s, border 0.3s;
+        height: 2.64211rem;
+        margin: 0 0 0.84211rem;
+        padding: 0.42105rem;
     }
 
     .search-container .search-form input[type="submit"]:hover {
-    background-color: #eb5d0b;
-    border-color: white;
-    color: white;
+        background-color: #eb5d0b;
+        border-color: white;
+        color: white;
     }
 
 

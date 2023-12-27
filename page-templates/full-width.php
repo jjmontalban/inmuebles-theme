@@ -14,9 +14,13 @@
         <?php endif; ?>
         <div class="title-container">
             <h1 class="post-title"><?php the_title(); ?></h1>
-            <p class="slogan"><?php echo get_post_meta(get_the_ID(), '_eslogan', true); ?></p>  
+            <p><?php echo get_post_meta(get_the_ID(), '_eslogan', true); ?></p>  
         </div>
+        <?php get_search_form( );  ?>
     </header>
+    
+    
+    
     <div class="entry-content">
         <?php the_content(); ?>
         <?php wp_link_pages(); ?>
@@ -28,45 +32,34 @@
 
 
 <style>
-        
-    body .type-page .featured-image{
-        margin-bottom: 0;
-    }  
-   
-    body .type-page .featured-image {
-        width: 100vw;
-        margin-left: calc(-50vw + 50%);
-    }
-
-    body .type-page .featured-image img {
-        width: 100%;
-        min-width: 300px; 
-        /* height: auto; */
-        object-fit: cover;
-        max-height: 50rem;
-    }
-
-    body .type-page .post-title::after {
-        background: 0 !important;
-    }
-
-    body .type-page .post-title {
-        margin-bottom: 0px  !important;
-        padding-bottom: 0px !important;
+    #content {
+       margin-top: 0;
     }
 
     body .type-page .title-container {
         position: absolute;
-        top: 50%;
+        top: 33%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
         z-index: 2;
         color: white;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.99);
-        width: 85%; /* Añade un ancho para todas las pantallas */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0);
+        width: 85%; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
     }
 
+
+    body .type-page .featured-image img {
+        min-height: 20rem;
+        min-width: auto;
+    }
+
+    
 </style>
 
 
