@@ -32,18 +32,20 @@
 
 
 <style>
+
     #content {
        margin-top: 0;
     }
 
     body .type-page .title-container {
+        position: absolute;
         top: 30%;
         left: 50%;
-        width: 85%; 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 2;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.99);
     }
 
     body .type-page .featured-image img {
@@ -53,15 +55,12 @@
 
 /* Modificar la posición en dispositivos móviles usando clases de Bootstrap */
 @media (max-width: 1023px) {
+    
     body .type-page .title-container {
         position: relative;
         margin-top: -70%; /* Ajusta la distancia desde arriba */
     }
 }
-
-
-
-
 
 </style>
 

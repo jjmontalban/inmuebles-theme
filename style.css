@@ -1371,24 +1371,6 @@ Text Domain::   chipicasa
         padding-bottom: 0px !important;
     }
 
-    body .type-page .title-container {
-        position: absolute;
-        top: 75%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        z-index: 2;
-        color: white;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.99);
-    }
-
-    @media screen and (max-width: 767px) {
-        body .type-page .title-container {
-        width: 85%;
-        top: 60%;
-        }
-    }
-
 
    /* -- 13.10 Search Form */
     .search-container {
