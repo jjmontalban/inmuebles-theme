@@ -376,26 +376,23 @@
                 <h4>Mapa</h4>
                 <div id="map" style="height: 400px; width: 100%; margin-bottom: 5%;"></div>
                 <!-- plano -->
-                <h4>Planos</h4>
                 <?php 
-                $plano1_url = get_post_meta(get_the_ID(), 'plano1', true);
-                if ($plano1_url) : ?>
-                    <img src="<?php echo esc_url($plano1_url); ?>" alt="Plano del inmueble" style="width: 100%;">
-                <?php endif; ?>
-                <?php 
-                $plano2_url = get_post_meta(get_the_ID(), 'plano2', true);
-                if ($plano2_url) : ?>
-                    <img src="<?php echo esc_url($plano2_url); ?>" alt="Plano del inmueble" style="width: 100%;">
-                <?php endif; ?>
-                <?php 
-                $plano3_url = get_post_meta(get_the_ID(), 'plano3', true);
-                if ($plano3_url) : ?>
-                    <img src="<?php echo esc_url($plano3_url); ?>" alt="Plano del inmueble" style="width: 100%;">
-                <?php endif; ?>
-                <?php 
-                $plano4_url = get_post_meta(get_the_ID(), 'plano4', true);
-                if ($plano4_url) : ?>
-                    <img src="<?php echo esc_url($plano4_url); ?>" alt="Plano del inmueble" style="width: 100%;">
+                
+                $planos = array(
+                    get_post_meta(get_the_ID(), 'plano1', true),
+                    get_post_meta(get_the_ID(), 'plano2', true),
+                    get_post_meta(get_the_ID(), 'plano3', true),
+                    get_post_meta(get_the_ID(), 'plano4', true)
+                );
+
+                // Filtrar el array para eliminar valores vacíos o nulos
+                $planos = array_filter($planos);
+
+                if (!empty($planos)) : ?>
+                    <h4>Planos</h4>
+                    <?php foreach ($planos as $plano) : ?>
+                        <img src="<?php echo esc_url($plano); ?>" alt="Plano del inmueble" style="width: 100%;">
+                    <?php endforeach; ?>
                 <?php endif; ?>
 
 
