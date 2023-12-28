@@ -1376,6 +1376,7 @@ Text Domain::   chipicasa
         background-color: #eb5d0b;
         color: white;
         padding-top: 1%;    
+        border-radius: 5px;
     }
 
     /* Estilos para el formulario */
