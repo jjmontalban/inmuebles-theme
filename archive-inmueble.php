@@ -40,7 +40,7 @@
                 <!-- Contenido del inmueble -->
                 <div class="inmuebles-content">
                     <!-- Título -->
-                    <h2><?php echo $tipos_inmueble_map[$tipo_inmueble] . ' en ' . $campos['nombre_calle'] . ', ' . $campos['localidad']; ?></h2>
+                    <h2><?php echo $tipos_inmueble_map[$tipo_inmueble] . ' en ' . $campos['nombre_calle']; ?></h2>
                     <!-- Precio -->
                     <p class="inmuebles-price">
                         <?php if ($campos['precio_venta']) : ?>
