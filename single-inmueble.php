@@ -1,15 +1,11 @@
 <?php get_header(); ?>
 <?php 
-
-
     // Definir un array asociativo para mapear valores de los tipos de inmueble
     global $tipos_inmueble_map;
     global $zonas_inmueble_map;
-
     $tipo_inmueble = get_post_meta(get_the_ID(), 'tipo_inmueble', true);
     $zona_inmueble = get_post_meta(get_the_ID(), 'zona_inmueble', true);
     $campos = obtener_campos_inmueble($post->ID);
-    
     //mapa
     $coordenadas = get_post_meta(get_the_ID(), 'campo_mapa', true);
     if ($coordenadas) {
@@ -21,10 +17,7 @@
         $lat = 0;
         $lng = 0;
     }
-
     $visibilidad_direccion = get_post_meta(get_the_ID(), 'visibilidad_direccion', true);
-
-
     // Pasa las coordenadas y la forma de mostrar el mapa de PHP a JavaScript
     wp_enqueue_script('scripts', get_template_directory_uri() . '/inc/scripts.js', array('jquery'), false, true);
     $datos_mapa = array(
@@ -37,11 +30,9 @@
     // Encolar el script de Google Maps
     $api_key = get_option('inmuebles_google_maps_api_key', '');
     wp_enqueue_script('google-maps', "https://maps.googleapis.com/maps/api/js?key={$api_key}&callback=initMap", array('scripts'), null, true);
-
 ?>
 
 <style>
-
   .type-inmueble .inmueble-gallery .swiper {
     width: 100%;
     height: 100%;
@@ -113,25 +104,19 @@
                             if (!empty($campos['planta'])) {
                                 echo '<li>Planta: ' . esc_html($campos['planta']) . '</li>';
                             }
-
                             if (!empty($campos['bloque'])) {
                                 echo '<li>Bloque: ' . esc_html($campos['bloque']) . '</li>';
                             }
-
                             if (!empty($campos['escalera'])) {
                                 echo '<li>Escalera: ' . esc_html($campos['escalera']) . '</li>';
                             }
-
                             if (!empty($campos['urbanizacion'])) {
                                 echo '<li>Urbanización: ' . esc_html($campos['urbanizacion']) . '</li>';
                             }
-
                             if (!empty($campos['interior_ext'])) {
                                 echo '<li>Ubicación: ' . esc_html($campos['interior_ext']) . '</li>';
                             }
-
                             echo (!empty($campos['ascensor'] && $campos['ascensor'] === 'si')) ? '<li>Tiene ascensor</li>' : '<li>No tiene ascensor</li>';
-
                             if (!empty($campos['ac'])) {
                                 echo '<li>Aire Acondicionado: ';
                                 switch ($campos['ac']) {
@@ -150,24 +135,20 @@
                                 }
                                 echo '</li>';
                             }
-
                             if (!empty($campos['tipologia_c'])) {
                                 echo '<li>Planta: ' . esc_html($campos['planta']) . '</li>';
                             }
-
                             if (!empty($campos['tipologia_chalet'])) {
                                 echo '<li>Tipo de Chalet: ';
                                 echo ($campos['tipologia_chalet'] == 'atico') ? 'Ático' : (($campos['tipologia_chalet'] == 'estudio') ? 'Estudio' : (($campos['tipologia_chalet'] == 'duplex') ? 'Dúplex' : $campos['tipologia_chalet']));
                                 echo '</li>';
                             }
                             
-
                             if (!empty($campos['tipo_local'])) {
                                 echo '<li>Tipo de local: ';
                                 echo ($campos['tipo_local'] == 'finca') ? 'Finca' : (($campos['tipo_local'] == 'castillo') ? 'Castillo' : (($campos['tipo_local'] == 'casa_rural') ? 'Casa Rural' : (($campos['tipo_local'] == 'casa_pueblo') ? 'Casa de Pueblo' : (($campos['tipo_local'] == 'cortijo') ? 'Cortijo' : $campos['tipo_local']))));
                                 echo '</li>';
-                            }
-                           
+                            }                        
                             if (!empty($campos['tipo_local'])) {
                                 echo '<li>Tipo de casa rústica: ';
                                 echo ($campos['tipo_rustica'] == 'finca') ? 'Finca' : (($campos['tipo_rustica'] == 'castillo') ? 'Castillo' : (($campos['tipo_rustica'] == 'casa_rural') ? 'Casa Rural' : (($campos['tipo_rustica'] == 'casa_pueblo') ? 'Casa de Pueblo' : (($campos['tipo_rustica'] == 'cortijo') ? 'Cortijo' : $campos['tipo_rustica']))));
@@ -179,17 +160,14 @@
                                 echo ($campos['tipo_terreno'] == 'no_urbanizable') ? 'No urbanizable' : (($campos['tipo_terreno'] == 'urbanizable') ? 'Urbanizable' : (($campos['tipo_terreno'] == 'urbano') ? 'Urbano (solar)' : $campos['tipo_terreno']));
                                 echo '</li>';
                             }
-
                             if (!empty($campos['tipo_plaza'])) {
                                 echo '<li>Tipo de plaza: ';
                                 echo ($campos['tipo_plaza'] == 'coche_peq') ? 'Coche pequeño' : (($campos['tipo_plaza'] == 'coche_grande') ? 'Coche grande' : (($campos['tipo_plaza'] == 'moto') ? 'Coche + Moto' : (($campos['tipo_plaza'] == 'coche_moto') ? 'Coche + Moto' : (($campos['tipo_plaza'] == 'mas_coches') ? '2 coches o más' : $campos['tipo_plaza']))));
                                 echo '</li>';
                             }
-
                             if (!empty($campos['m_plaza'])) {
                                 echo '<li>Superficie de la plaza: ' . esc_html($campos['m_plaza']) . '</li>';
                             }
-
                             if (!empty($campos['m_parcela'])) {
                                 echo '<li>Metros de parcela: ' . esc_html($campos['m_parcela']) . '</li>';
                             }
@@ -197,35 +175,27 @@
                             if (!empty($campos['m_fachada'])) {
                                 echo '<li>Metros de fachada: ' . esc_html($campos['m_fachada']) . '</li>';
                             }
-
                             if (!empty($campos['m_lineales'])) {
                                 echo '<li>Metros lineales: ' . esc_html($campos['m_lineales']) . '</li>';
                             }
-
                             if (!empty($campos['superf_terreno'])) {
                                 echo '<li>Superficie del terreno: ' . esc_html($campos['superf_terreno']) . '</li>';
                             }
-
                             if (!empty($campos['num_estancias'])) {
                                 echo '<li>Nº de estancias: ' . esc_html($campos['num_estancias']) . '</li>';
                             }
-
                             if (!empty($campos['num_plantas'])) {
                                 echo '<li>Nº de plantas: ' . esc_html($campos['num_plantas']) . '</li>';
                             }
-
                             if (!empty($campos['num_escap'])) {
                                 echo '<li>Nº de escaparates: ' . esc_html($campos['num_escap']) . '</li>';
                             }
-
                             if (!empty($campos['num_ascensores'])) {
                                 echo '<li>Nº de ascensores: ' . esc_html($campos['num_ascensores']) . '</li>';
                             }
-
                             if (!empty($campos['num_plazas'])) {
                                 echo '<li>Nº de plazas de garaje: ' . esc_html($campos['num_plazas']) . '</li>';
                             }
-
                             echo (!empty($campos['acceso_rodado'] && $campos['acceso_rodado'] === 'si')) ? '<li>Sí tiene</li>' : '<li>No disponible</li>';
                             
                             if (!empty($campos['si_rodado'])) {
@@ -263,7 +233,6 @@
                             }
                             ?> 
                         </ul>
-
                         <h4>Otras características:</h4>
                         <ul>
                             <?php 
@@ -291,7 +260,6 @@
                         </ul>
                         
                     </div>
-
                     <!-- Segunda columna -->
                     <div class="column-list">
                         <h4>Equipamiento</h4>
@@ -308,8 +276,6 @@
                                 echo (!empty( $caracteristica )) ? '<li>' . esc_html( $caracteristica ) . '</li>' : '';
                             }  
                             ?>
-                            
-
                         </ul>
                         <h4>Certificado energético</h4>
                         <ul>
@@ -363,13 +329,7 @@
                                     echo '<li>' . esc_html( $caracteristica_garaje ) . '</li>';
                                 }
                             }
-
-
-
-
-
                         ?>
-
                     </div>
                 </div>
                 <!-- mapa -->
@@ -393,21 +353,8 @@
                     <?php foreach ($planos as $plano) : ?>
                         <img src="<?php echo esc_url($plano); ?>" alt="Plano del inmueble" style="width: 100%;">
                     <?php endforeach; ?>
-                <?php endif; ?>
-
-
-                
+                <?php endif; ?> 
             </div>
-            
-
-
-
-              
-
-                
-           
-                
-
         </article>
         <?php endwhile; ?>
     <?php else: ?>
@@ -447,6 +394,4 @@
             }
         });
     }
-
-    
 </script>
