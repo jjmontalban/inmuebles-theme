@@ -50,7 +50,7 @@ function my_login_logo() {
       #login h1 a, .login h1 a {
         background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/img/login.png');
         height: 225px;
-        width: 70%;
+        width: 100%;
         background-size: cover;
         background-repeat: no-repeat;
       }

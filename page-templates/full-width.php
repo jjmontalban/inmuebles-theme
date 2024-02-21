@@ -15,16 +15,17 @@
         <div class="title-container">
             <h1 class="post-title"><?php the_title(); ?></h1>
             <p><?php echo get_post_meta(get_the_ID(), '_eslogan', true); ?></p>  
+            <?php the_content(); ?>
         </div>
-        <?php get_search_form( );  ?>
+        <div class="entry-content">
+            <?php get_search_form( );  
+            echo do_shortcode('[ultimos_inmuebles]');
+            ?>
+        </div>
     </header>
     
     
     
-    <div class="entry-content">
-        <?php the_content(); ?>
-        <?php wp_link_pages(); ?>
-    </div>
     <footer>
         <span class="edit-link"><?php edit_post_link( __( '(Edit)', 'inmuebles' ) ); ?></span>
     </footer>
