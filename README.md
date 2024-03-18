@@ -1,6 +1,6 @@
 # Inmuebles Theme for WordPress
 
-Inmuebles Theme is a custom WordPress theme designed to complement the Inmuebles plugin ([link to plugin repository](https://github.com/jjmontalban/inmuebles)), which is installed at the URL chipicasa.com. The theme is tailored specifically for real estate management and is supported by the Foundation CSS framework from [ZURB](https://foundation.zurb.com/).
+Inmuebles Theme is a custom WordPress theme designed to complement the Inmuebles plugin ([Inmuebles](https://github.com/jjmontalban/inmuebles)), which is installed at the URL chipicasa.com. The theme is tailored specifically for real estate management and is supported by the Foundation CSS framework from [ZURB](https://foundation.zurb.com/).
 
 ## Features
 
