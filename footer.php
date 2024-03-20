@@ -10,11 +10,28 @@
  */
 
 ?>
-
-	<footer id="colophon" class="site-footer">
-		
-	</footer><!-- #colophon -->
-<!-- </div> --><!-- #page -->
+<footer id="colophon" class="site-footer">
+	<?php get_sidebar('footer'); ?>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+			<nav class="nav-footer">
+				<?php
+				if ( is_active_sidebar( 'footer-1' ) ) { dynamic_sidebar( 'footer-1' ); }
+				?>
+			</nav>
+			<div class="copyright-footer">
+				<p class="copyright color-text-a">
+					&copy;<?php echo esc_html(date(' Y ')) . '<span class="color-a"> ' . esc_html( get_bloginfo('name') ) . '</span>'; ?>       
+				</p>
+			</div>
+			<div class="credits">
+				<?php echo sprintf( esc_html__( 'Web design %s', 'chipicasa' ), '<a target="_blank" href="https://jjmontalban.github.io/">JJMöntalban</a>' ); ?>
+			</div>
+			</div>
+		</div>
+	</div>
+</footer><!-- #colophon -->
 
 <?php wp_footer(); ?>
 
