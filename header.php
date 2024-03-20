@@ -52,6 +52,21 @@
             data-target="#navbarTogglerDemo01" aria-expanded="false">
                 <span class="fa fa-search" aria-hidden="true"></span>
             </button>
+
+
+            <!--/ START Form Search Star /-->
+            <div class="click-closed"></div>
+            <div class="box-collapse">
+                <div class="title-box-d">
+                <h3 class="title-d"><?php echo esc_html__( 'Search Property', 'chipicasa' ); ?></h3>
+                </div>
+                <span class="close-box-collapse right-boxed ion-ios-close"></span>
+                <div class="box-collapse-wrap form">
+                    <?php get_search_form();  ?>
+                </div>
+            </div>
+            <!--/ END Form Search Star /-->
+
         </div>
     </nav>
     <!--/ Nav End /-->
