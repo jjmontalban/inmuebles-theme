@@ -93,7 +93,7 @@ function chipicasa_setup() {
 	add_theme_support(
 		'custom-logo',
 		array(
-			'height'      => 250,
+			'height'      => 50,
 			'width'       => 250,
 			'flex-width'  => true,
 			'flex-height' => true,
@@ -227,7 +227,6 @@ function chipicasa_login_logo() {
 	<style type="text/css">
 		#login h1 a, .login h1 a {
 			background-image: url('<?php echo $logo_url; ?>');
-			min-height: 150px;
 			width: 100%;
 			background-size: contain;
 			background-repeat: no-repeat;

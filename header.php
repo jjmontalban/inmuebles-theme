@@ -32,7 +32,9 @@
                 <span></span>
                 <span></span>
             </button>
-            <a class="navbar-brand text-brand" href="index.html">Estate<span class="color-b">Agency</span></a>
+            <div class="navbar-brand text-brand">
+                <?php the_custom_logo(); ?>
+            </div>
             <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse"
             data-target="#navbarTogglerDemo01" aria-expanded="false">
                 <span class="fa fa-search" aria-hidden="true"></span>
