@@ -214,3 +214,38 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  */
 require get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
 
+
+/**
+ * @snippet      Custom Login 
+ * @author       https://codex.wordpress.org/Customizing_the_Login_Form
+ */
+function chipicasa_login_logo() { 
+	$custom_logo_html = get_custom_logo();
+	preg_match('/src="([^"]*)"/i', $custom_logo_html, $matches);
+	$logo_url = $matches[1];
+	?>
+	<style type="text/css">
+		#login h1 a, .login h1 a {
+			background-image: url('<?php echo $logo_url; ?>');
+			min-height: 150px;
+			width: 100%;
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+		.login form{
+			background-color: #fff;
+			border: 0;
+		}
+		.login{
+			background:  #fff;;
+		}
+		.language-switcher,
+		.privacy-policy-page-link,
+		#nav,
+		#backtoblog{
+			display:none
+		}
+	</style>
+<?php
+}
+add_action( 'login_enqueue_scripts', 'chipicasa_login_logo' );
