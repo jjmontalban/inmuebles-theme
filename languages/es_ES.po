@@ -4,14 +4,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chipicasa-theme 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/chipicasa-theme\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2024-03-22T15:32:13+00:00\n"
+"PO-Revision-Date: 2024-03-22 16:47+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-03-22T15:32:13+00:00\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.7.1\n"
+"X-Generator: Poedit 3.4.2\n"
 "X-Domain: chipicasa\n"
 
 #. Theme Name of the theme
@@ -25,7 +26,7 @@ msgstr ""
 
 #. Description of the theme
 msgid "A Real State App"
-msgstr ""
+msgstr "Una App Inmobiliaria"
 
 #. Author of the theme
 msgid "JJMontalban"
@@ -33,15 +34,19 @@ msgstr ""
 
 #: 404.php:17
 msgid "Oops! That page can&rsquo;t be found."
-msgstr ""
+msgstr "¡Ups! No se puede encontrar esa página."
 
 #: 404.php:21
-msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
 msgstr ""
+"Parece que no se encontró nada en este lugar. ¿Quizás probar uno de los "
+"enlaces a continuación o realizar una búsqueda?"
 
 #: 404.php:30
 msgid "Most Used Categories"
-msgstr ""
+msgstr "Categorías más usadas"
 
 #. translators: %1$s: smiley
 #: 404.php:48
@@ -50,7 +55,7 @@ msgstr ""
 
 #: archive-inmueble.php:31
 msgid "in"
-msgstr ""
+msgstr "en"
 
 #: archive-inmueble.php:41
 msgid "%s €/mes"
@@ -58,23 +63,23 @@ msgstr ""
 
 #: archive-inmueble.php:47
 msgid "Click here to view"
-msgstr ""
+msgstr "Click para ver"
 
 #: archive-inmueble.php:55
 msgid "Area"
-msgstr ""
+msgstr "Área"
 
 #: archive-inmueble.php:63
 msgid "Beds"
-msgstr ""
+msgstr "Dorm."
 
 #: archive-inmueble.php:69
 msgid "Baths"
-msgstr ""
+msgstr "Baños"
 
 #: footer.php:29
 msgid "Web design %s"
-msgstr ""
+msgstr "Diseño Web"
 
 #: functions.php:52
 msgid "Primary"
@@ -98,7 +103,7 @@ msgstr ""
 
 #: header.php:63
 msgid "Search Property"
-msgstr ""
+msgstr "Buscar Inmueble"
 
 #. translators: %s: post date.
 #: inc/template-tags.php:30
@@ -134,43 +139,50 @@ msgid "Tagged %1$s"
 msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: inc/template-tags.php:81
-#: template-parts/content-page.php:39
+#: inc/template-tags.php:81 template-parts/content-page.php:39
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr ""
 
 #. translators: %s: search query.
 #: search.php:21
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "Resultados de búsqueda para:% s"
 
 #: single.php:23
 msgid "Previous:"
-msgstr ""
+msgstr "Anterior"
 
 #: single.php:24
 msgid "Next:"
-msgstr ""
+msgstr "Siguiente"
 
 #: template-parts/content-none.php:14
 msgid "Nothing Found"
-msgstr ""
+msgstr "Sin resultados"
 
 #. translators: 1: link to WP admin new post page.
 #: template-parts/content-none.php:24
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
 #: template-parts/content-none.php:37
-msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
 msgstr ""
+"Lo sentimos, pero nada coincide con tus términos de búsqueda. Inténtelo de "
+"nuevo con algunas palabras clave diferentes."
 
 #: template-parts/content-none.php:44
-msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
 msgstr ""
+"Parece que no podemos encontrar lo que estás buscando. Quizás la búsqueda "
+"pueda ayudar."
 
-#: template-parts/content-page.php:25
-#: template-parts/content.php:53
+#: template-parts/content-page.php:25 template-parts/content.php:53
 msgid "Pages:"
 msgstr ""
 

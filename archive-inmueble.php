@@ -4,10 +4,10 @@
     // Array asociativo para mapear valores de los tipos de inmueble
     global $tipos_inmueble_map;
 ?>
+    <section class="property-grid grid">
+        <div class="container">
 <div class="row">
     <div class="col-md-8">
-        <section class="property-grid grid">
-            <div class="container">
                 <div class="row">
                     <?php if ( have_posts() ): ?>
                         <?php while ( have_posts() ) : the_post() ?>
@@ -28,7 +28,7 @@
                                                 <h2 class="card-title-a">
                                                     <a href="<?php the_permalink(); ?>">
                                                         <?php echo esc_html__( $tipos_inmueble_map[$tipo_inmueble], 'chipicasa' ); ?>
-                                                        <br /> <?php echo esc_html__( 'en', 'chipicasa' ); ?> <?php echo esc_html__( $campos['nombre_calle'], 'chipicasa' ); ?>
+                                                        <br /> <?php echo esc_html__( 'in', 'chipicasa' ); ?> <?php echo esc_html__( $campos['nombre_calle'], 'chipicasa' ); ?>
                                                     </a>
                                                 </h2>
                                             </div>
@@ -38,8 +38,9 @@
                                                         <?php if ($campos['precio_venta']) : ?>
                                                             <?php echo $campos['precio_venta']; ?> €
                                                         <?php else: ?>
-                                                            <?php echo $campos['precio_alquiler']; ?> €/mes
+                                                            <?php printf( esc_html__( '%s €/mes', 'chipicasa' ), $campos['precio_alquiler'] ); ?>
                                                         <?php endif; ?>
+
                                                     </span>
                                                 </div>
                                                 <a href="<?php the_permalink(); ?>" class="link-a">
@@ -81,14 +82,18 @@
                         <?php get_template_part( 'template-parts/no-content' ); ?>
                     <?php endif; ?>
                 </div>
+                </div>
+            <div class="col-md-3">
+                
+                
+                <div class="row">
+                    <!-- Sidebar -->
+                    <?php get_sidebar(); ?>
+                </div>
+                
+                
             </div>
-        </section>
-    </div>
-    <div class="col-md-4">
-        <section class="property-grid grid">
-            <!-- Sidebar -->
-            <?php get_sidebar(); ?>
-        </section>
-    </div>
-</div>
+        </div>
+        </div>
+    </section>
 <?php get_footer(); ?>

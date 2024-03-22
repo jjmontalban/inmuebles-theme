@@ -1267,7 +1267,8 @@ footer .credits {
 }
 
 .btn.btn-a,
-.btn.btn-b {
+.btn.btn-b,
+.btn.btn-w {
   border-radius: 0;
   padding: 1rem 3rem;
   letter-spacing: .05rem;
@@ -1293,6 +1294,16 @@ footer .credits {
   color: #ffffff;
 }
 
+.btn.btn-w {
+  background-color: #25d366;
+  color: #ffffff;
+}
+
+.btn.btn-w:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
 .btn.btn-b-n {
   background-color: #eb5d0b;
   color: #ffffff;
@@ -1303,6 +1314,15 @@ footer .credits {
   background-color: #fef59a;
   color: #ffffff;
 }
+
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
 
 @media (min-width: 576px) {
   .intro .intro-title {
@@ -1590,6 +1610,10 @@ footer .credits {
 }
 
 @media (min-width: 1200px) {
+  .container {
+    max-width: 1600px;
+  }
+  
   .card-box-d .card-overlay-hover {
     padding: 15px 40px 5px 35px;
   }
