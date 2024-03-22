@@ -30,6 +30,9 @@ function chipicasa_setup() {
 
 	// Add default posts links to head.
 	add_theme_support( 'automatic-feed-links' );
+	
+	
+	add_theme_support( 'align-wide' );
 
 	/*
 		* Let WordPress manage the document title.
