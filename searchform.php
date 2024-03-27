@@ -26,7 +26,7 @@
             </div>
         </div>
         <div class="col-md-12">
-            <button type="submit" class="btn btn-b search-submit"><?php echo esc_attr_x( 'Search Property', 'submit button' ) ?></button>
+            <button type="submit" class="btn btn-b search-submit"><?php echo esc_html__( 'Search Property', 'chipicasa' ) ?></button>
         </div>
 
     </div>

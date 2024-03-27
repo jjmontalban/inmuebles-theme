@@ -4,15 +4,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chipicasa-theme 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/inmuebles-theme\n"
-"POT-Creation-Date: 2024-03-27T11:36:13+00:00\n"
-"PO-Revision-Date: 2024-03-27 12:48+0100\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: es\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.4.2\n"
+"POT-Creation-Date: 2024-03-27T11:36:13+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.7.1\n"
 "X-Domain: chipicasa\n"
 
 #. Theme Name of the theme
@@ -26,7 +25,7 @@ msgstr ""
 
 #. Description of the theme
 msgid "A Real State App"
-msgstr "Una aplicación inmobiliaria"
+msgstr ""
 
 #. Author of the theme
 msgid "JJMontalban"
@@ -34,52 +33,48 @@ msgstr ""
 
 #: 404.php:17
 msgid "Oops! That page can&rsquo;t be found."
-msgstr "¡Ups! No se puede encontrar esa página."
+msgstr ""
 
 #: 404.php:21
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
+msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
 msgstr ""
-"Parece que no se encontró nada en este lugar. ¿Quizás probar uno de los "
-"enlaces a continuación o realizar una búsqueda?"
 
 #: 404.php:30
 msgid "Most Used Categories"
-msgstr "Categorías más usadas"
+msgstr ""
 
 #. translators: %1$s: smiley
 #: 404.php:48
 msgid "Try looking in the monthly archives. %1$s"
-msgstr "Trate de buscar en los archivos mensuales. %1$s"
+msgstr ""
 
 #: archive-inmueble.php:39
 msgid "in"
-msgstr "en"
+msgstr ""
 
 #: archive-inmueble.php:49
 msgid "%s €/mes"
-msgstr "%s €/mes"
+msgstr ""
 
 #: archive-inmueble.php:54
 msgid "Click here to view"
-msgstr "Click para ver"
+msgstr ""
 
 #: archive-inmueble.php:62
 msgid "Area"
-msgstr "Metros"
+msgstr ""
 
 #: archive-inmueble.php:70
 msgid "Beds"
-msgstr "Dormitorios"
+msgstr ""
 
 #: archive-inmueble.php:76
 msgid "Baths"
-msgstr "Baños"
+msgstr ""
 
 #: footer.php:28
 msgid "Web design %s"
-msgstr "Diseño"
+msgstr ""
 
 #: functions.php:55
 msgid "Primary"
@@ -101,9 +96,10 @@ msgstr ""
 msgid "Add footer widgets here."
 msgstr ""
 
-#: header.php:63 searchform.php:29
+#: header.php:63
+#: searchform.php:29
 msgid "Search Property"
-msgstr "Buscar Inmueble"
+msgstr ""
 
 #. translators: %s: post date.
 #: inc/template-tags.php:30
@@ -139,62 +135,63 @@ msgid "Tagged %1$s"
 msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: inc/template-tags.php:81 template-parts/content-page.php:39
+#: inc/template-tags.php:81
+#: template-parts/content-page.php:39
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr ""
 
 #. translators: %s: search query.
 #: search.php:21
 msgid "Search Results for: %s"
-msgstr "Resultados de búsqueda para:%s"
+msgstr ""
 
 #: single-inmueble.php:89
 msgid "€/mes"
-msgstr "€/mes"
+msgstr ""
 
 #: single-inmueble.php:101
 msgid "Quick Summary"
-msgstr "Resumen"
+msgstr ""
 
 #: single-inmueble.php:109
 msgid "Zona:"
-msgstr "Zona:"
+msgstr ""
 
 #: single-inmueble.php:116
 msgid "Área:"
-msgstr "Metros:"
+msgstr ""
 
 #: single-inmueble.php:123
 msgid "Parcela de:"
-msgstr "Parcela de:"
+msgstr ""
 
 #: single-inmueble.php:130
 msgid "M útiles:"
-msgstr "Metros útiles:"
+msgstr ""
 
 #: single-inmueble.php:137
 msgid "Dormitorios:"
-msgstr "Dormitorios:"
+msgstr ""
 
 #: single-inmueble.php:144
 msgid "Baños:"
-msgstr "Baños:"
+msgstr ""
 
 #: single-inmueble.php:151
 msgid "Consumo:"
-msgstr "Consumo:"
+msgstr ""
 
 #: single-inmueble.php:159
 msgid "Emisiones:"
-msgstr "Emisiones:"
+msgstr ""
 
 #: single-inmueble.php:167
 msgid "Orientación:"
-msgstr "Orientación:"
+msgstr ""
 
 #: single-inmueble.php:175
 msgid "Calificación del terreno:"
-msgstr "Calificación del terreno:"
+msgstr ""
 
 #: single-inmueble.php:183
 msgid "Equipamiento del local:"
@@ -212,7 +209,8 @@ msgstr ""
 msgid "Características"
 msgstr ""
 
-#: single-inmueble.php:224 single-inmueble.php:259
+#: single-inmueble.php:224
+#: single-inmueble.php:259
 msgid "Planta: "
 msgstr ""
 
@@ -240,7 +238,8 @@ msgstr ""
 msgid "No tiene"
 msgstr ""
 
-#: single-inmueble.php:246 single-inmueble.php:502
+#: single-inmueble.php:246
+#: single-inmueble.php:502
 msgid "Frío"
 msgstr ""
 
@@ -272,23 +271,28 @@ msgstr ""
 msgid "Tipo de local: "
 msgstr ""
 
-#: single-inmueble.php:286 single-inmueble.php:311
+#: single-inmueble.php:286
+#: single-inmueble.php:311
 msgid "Finca"
 msgstr ""
 
-#: single-inmueble.php:289 single-inmueble.php:314
+#: single-inmueble.php:289
+#: single-inmueble.php:314
 msgid "Castillo"
 msgstr ""
 
-#: single-inmueble.php:292 single-inmueble.php:317
+#: single-inmueble.php:292
+#: single-inmueble.php:317
 msgid "Casa Rural"
 msgstr ""
 
-#: single-inmueble.php:295 single-inmueble.php:320
+#: single-inmueble.php:295
+#: single-inmueble.php:320
 msgid "Casa de Pueblo"
 msgstr ""
 
-#: single-inmueble.php:298 single-inmueble.php:323
+#: single-inmueble.php:298
+#: single-inmueble.php:323
 msgid "Cortijo"
 msgstr ""
 
@@ -324,7 +328,8 @@ msgstr ""
 msgid "Coche grande"
 msgstr ""
 
-#: single-inmueble.php:361 single-inmueble.php:364
+#: single-inmueble.php:361
+#: single-inmueble.php:364
 msgid "Coche + Moto"
 msgstr ""
 
@@ -372,7 +377,8 @@ msgstr ""
 msgid "Nº de plazas de garaje: "
 msgstr ""
 
-#: single-inmueble.php:419 single-inmueble.php:499
+#: single-inmueble.php:419
+#: single-inmueble.php:499
 msgid "No disponible"
 msgstr ""
 
@@ -498,11 +504,11 @@ msgstr ""
 
 #: single-inmueble.php:573
 msgid "Floor Plans"
-msgstr "Planos"
+msgstr ""
 
 #: single-inmueble.php:577
 msgid "Ubication"
-msgstr "Ubicación"
+msgstr ""
 
 #: single-inmueble.php:581
 msgid "Video"
@@ -514,39 +520,31 @@ msgstr ""
 
 #: single.php:23
 msgid "Previous:"
-msgstr "Anterior:"
+msgstr ""
 
 #: single.php:24
 msgid "Next:"
-msgstr "Siguiente:"
+msgstr ""
 
 #: template-parts/content-none.php:14
 msgid "Nothing Found"
-msgstr "Nada encontrado"
+msgstr ""
 
 #. translators: 1: link to WP admin new post page.
 #: template-parts/content-none.php:24
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
 #: template-parts/content-none.php:37
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
 msgstr ""
-"Lo sentimos, pero nada coincide con tus términos de búsqueda. Inténtelo de "
-"nuevo con algunas palabras clave diferentes."
 
 #: template-parts/content-none.php:44
-msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr ""
-"Parece que no podemos encontrar lo que estás buscando. Quizás la búsqueda "
-"pueda ayudar."
 
-#: template-parts/content-page.php:25 template-parts/content.php:53
+#: template-parts/content-page.php:25
+#: template-parts/content.php:53
 msgid "Pages:"
 msgstr ""
 
@@ -554,5 +552,3 @@ msgstr ""
 #: template-parts/content.php:40
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
-"Parece que no podemos encontrar lo que estás buscando. Quizás la búsqueda "
-"pueda ayudar."

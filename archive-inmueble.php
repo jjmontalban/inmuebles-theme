@@ -1,13 +1,21 @@
-<?php get_header(); ?>
+<?php
+/**
+ * The template for displaying all single inmueble
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+ *
+ * @package chipicasa
+ */
+get_header();
 
-<?php 
-    // Array asociativo para mapear valores de los tipos de inmueble
-    global $tipos_inmueble_map;
+
+// Array asociativo para mapear valores de los tipos de inmueble
+global $tipos_inmueble_map;
 ?>
-    <section class="property-grid grid">
-        <div class="container">
-<div class="row">
-    <div class="col-md-8">
+<section class="property-grid grid">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
                 <div class="row">
                     <?php if ( have_posts() ): ?>
                         <?php while ( have_posts() ) : the_post() ?>
@@ -40,7 +48,6 @@
                                                         <?php else: ?>
                                                             <?php printf( esc_html__( '%s €/mes', 'chipicasa' ), $campos['precio_alquiler'] ); ?>
                                                         <?php endif; ?>
-
                                                     </span>
                                                 </div>
                                                 <a href="<?php the_permalink(); ?>" class="link-a">
@@ -82,18 +89,15 @@
                         <?php get_template_part( 'template-parts/no-content' ); ?>
                     <?php endif; ?>
                 </div>
-                </div>
+            </div>
+
             <div class="col-md-3">
-                
-                
                 <div class="row">
                     <!-- Sidebar -->
                     <?php get_sidebar(); ?>
                 </div>
-                
-                
             </div>
         </div>
-        </div>
-    </section>
+    </div>
+</section>
 <?php get_footer(); ?>
