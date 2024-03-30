@@ -135,7 +135,29 @@ a:hover {
   background-position: center center;
 }
 
-/*------/ List a /------*/
+.eslogan {
+  position: absolute;
+  left: 23%;
+  transform: translate(-15%, -50%);
+  color: white;
+  top: 25%;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.99);
+}
+
+.wp-block-cover.has-parallax {
+  background-attachment: fixed !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wp-block-cover.has-parallax, 
+  .wp-block-cover-image.has-parallax, 
+  .wp-block-cover__image-background.has-parallax, 
+  video.wp-block-cover__video-background.has-parallax {
+      background-attachment: fixed !important;
+  }
+}
+
+/*------/ List a /------*/  
 
 .list-a {
   display: inline-block;
