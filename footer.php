@@ -25,7 +25,7 @@
 				</p>
 			</div>
 			<div class="credits">
-				<?php echo sprintf( esc_html__( 'Web design %s', 'chipicasa' ), '<a target="_blank" href="https://jjmontalban.github.io/">JJMöntalban</a>' ); ?>
+				<?php echo 'Diseño web: <a target="_blank" href="https://jjmontalban.github.io/">JJMöntalban</a>'; ?>
 			</div>
 			</div>
 		</div>
