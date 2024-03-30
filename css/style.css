@@ -1747,11 +1747,23 @@ footer .credits {
 }
 
 @media (max-width: 575px) {
+  .navbar-brand img {
+    width: 200px; 
+    height: auto;
+  }
+
   .box-collapse .title-box-d {
     left: 35px;
   }
 
   .box-collapse .title-box-d .title-d {
     font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 348px) {
+  .navbar-brand img {
+    width: 150px;
+    height: auto;
   }
 }
