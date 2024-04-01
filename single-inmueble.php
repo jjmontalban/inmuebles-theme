@@ -570,7 +570,7 @@ wp_enqueue_script('google-maps', "https://maps.googleapis.com/maps/api/js?key={$
 						<ul class="nav nav-pills-a nav-pills mb-3 section-t3" id="pills-tab" role="tablist">
 							<li class="nav-item">
 								<a class="nav-link active" id="pills-plans-tab" data-toggle="pill" href="#pills-plans" role="tab" aria-controls="pills-plans"
-									aria-selected="false"><?php esc_html_e('Floor Plans', 'chipicasa'); ?></a>
+									aria-selected="true"><?php esc_html_e('Floor Plans', 'chipicasa'); ?></a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" id="pills-map-tab" data-toggle="pill" href="#pills-map" role="tab" aria-controls="pills-map"
@@ -578,22 +578,22 @@ wp_enqueue_script('google-maps', "https://maps.googleapis.com/maps/api/js?key={$
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" id="pills-video-tab" data-toggle="pill" href="#pills-video" role="tab"
-									aria-controls="pills-video" aria-selected="true"><?php esc_html_e('Video', 'chipicasa'); ?></a>
+									aria-controls="pills-video" aria-selected="false"><?php esc_html_e('Video', 'chipicasa'); ?></a>
 							</li>
 						</ul>
 						<div class="tab-content" id="pills-tabContent">
-							<div class="tab-pane fade show active" id="pills-video" role="tabpanel" aria-labelledby="pills-video-tab">
+							<div class="tab-pane fade" id="pills-video" role="tabpanel" aria-labelledby="pills-video-tab">
 								<!-- Content for the video  -->
 							</div>
-							<?php 
-							$planos = array(
-								get_post_meta(get_the_ID(), 'plano1', true),
-								get_post_meta(get_the_ID(), 'plano2', true),
-								get_post_meta(get_the_ID(), 'plano3', true),
-								get_post_meta(get_the_ID(), 'plano4', true)
-							); 
-							if (!empty($planos)) : ?>
-								<div class="tab-pane fade" id="pills-plans" role="tabpanel" aria-labelledby="pills-plans-tab">
+							<div class="tab-pane fade show active" id="pills-plans" role="tabpanel" aria-labelledby="pills-plans-tab">
+								<?php 
+								$planos = array(
+									get_post_meta(get_the_ID(), 'plano1', true),
+									get_post_meta(get_the_ID(), 'plano2', true),
+									get_post_meta(get_the_ID(), 'plano3', true),
+									get_post_meta(get_the_ID(), 'plano4', true)
+								); 
+								if (!empty($planos)) : ?>
 									<?php
 									// Filtrar el array para eliminar valores vacíos o nulos
 									$planos = array_filter($planos);
@@ -601,8 +601,8 @@ wp_enqueue_script('google-maps', "https://maps.googleapis.com/maps/api/js?key={$
 									foreach ($planos as $plano) : ?>
 										<img src="<?php echo esc_url($plano); ?>" alt="<?php esc_html_e('Plano del inmueble', 'chipicasa'); ?>" style="width: 100%;">
 									<?php endforeach; ?>
-								</div>
-							<?php endif; ?> 
+								<?php endif; ?> 
+							</div>
 							<div class="tab-pane fade" id="pills-map" role="tabpanel" aria-labelledby="pills-map-tab">
 								<div id="map" style="height: 400px; width: 100%; margin-bottom: 5%;"></div>
 							</div>
