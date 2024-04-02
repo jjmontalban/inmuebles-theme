@@ -577,13 +577,22 @@ wp_enqueue_script('google-maps', "https://maps.googleapis.com/maps/api/js?key={$
 									aria-selected="false"><?php esc_html_e('Ubication', 'chipicasa'); ?></a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" id="pills-video-tab" data-toggle="pill" href="#pills-video" role="tab"
-									aria-controls="pills-video" aria-selected="false"><?php esc_html_e('Video', 'chipicasa'); ?></a>
+								<a class="nav-link" id="pills-video-tab" data-toggle="pill" href="#pills-video" role="tab" aria-controls="pills-video" aria-selected="false"><?php esc_html_e('Video', 'chipicasa'); ?></a>
 							</li>
 						</ul>
 						<div class="tab-content" id="pills-tabContent">
 							<div class="tab-pane fade" id="pills-video" role="tabpanel" aria-labelledby="pills-video-tab">
-								<!-- Content for the video  -->
+								<?php
+								// Obtener la URL del vídeo del campo personalizado
+								$video_url = get_post_meta(get_the_ID(), 'video_embed', true);
+								// Verificar si hay una URL de vídeo disponible
+								if (!empty($video_url)) :
+									?>								
+									<video controls style="width: 100%;">
+										<source src="<?php echo esc_url($video_url); ?>" type="video/mp4">
+										<?php esc_html_e('Tu navegador no soporta la reproducción de vídeos.', 'chipicasa'); ?>
+									</video>
+								<?php endif; ?>
 							</div>
 							<div class="tab-pane fade show active" id="pills-plans" role="tabpanel" aria-labelledby="pills-plans-tab">
 								<?php 
