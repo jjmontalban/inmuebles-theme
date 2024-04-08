@@ -258,7 +258,6 @@ wp_enqueue_script('google-maps', "https://maps.googleapis.com/maps/api/js?key={$
 										if (!empty($campos['tipologia_c'])) {
 											echo '<li>' . esc_html__('Planta: ', 'chipicasa') . esc_html($campos['planta']) . '</li>';
 										}
-
 										if (!empty($campos['tipologia_chalet'])) {
 											echo '<li>' . esc_html__('Tipo de Chalet: ', 'chipicasa');
 											switch ($campos['tipologia_chalet']) {
@@ -276,9 +275,7 @@ wp_enqueue_script('google-maps', "https://maps.googleapis.com/maps/api/js?key={$
 													break;
 											}
 											echo '</li>';
-										}
-										
-
+										}	
 										if (!empty($campos['tipo_local'])) {
 											echo '<li>' . esc_html__('Tipo de local: ', 'chipicasa');
 											switch ($campos['tipo_local']) {
@@ -303,7 +300,6 @@ wp_enqueue_script('google-maps', "https://maps.googleapis.com/maps/api/js?key={$
 											}
 											echo '</li>';
 										}
-										
 										if (!empty($campos['tipo_rustica'])) {
 											echo '<li>' . esc_html__('Tipo de casa rústica: ', 'chipicasa');
 											switch ($campos['tipo_rustica']) {
@@ -328,7 +324,6 @@ wp_enqueue_script('google-maps', "https://maps.googleapis.com/maps/api/js?key={$
 											}
 											echo '</li>';
 										}
-										
 										if (!empty($campos['tipo_terreno'])) {
 											echo '<li>' . esc_html__('Tipo de terreno: ', 'chipicasa');
 											switch ($campos['tipo_terreno']) {
@@ -347,7 +342,6 @@ wp_enqueue_script('google-maps', "https://maps.googleapis.com/maps/api/js?key={$
 											}
 											echo '</li>';
 										}
-										
 										if (!empty($campos['tipo_plaza'])) {
 											echo '<li>' . esc_html__('Tipo de plaza: ', 'chipicasa');
 											switch ($campos['tipo_plaza']) {
@@ -372,47 +366,36 @@ wp_enqueue_script('google-maps', "https://maps.googleapis.com/maps/api/js?key={$
 											}
 											echo '</li>';
 										}
-										
 										if (!empty($campos['m_plaza'])) {
 											echo '<li>' . esc_html__('Superficie de la plaza: ', 'chipicasa') . esc_html($campos['m_plaza']) . '</li>';
 										}
-
 										if (!empty($campos['m_parcela'])) {
 											echo '<li>' . esc_html__('Metros de parcela: ', 'chipicasa') . esc_html($campos['m_parcela']) . '</li>';
 										}
-
 										if (!empty($campos['m_fachada'])) {
 											echo '<li>' . esc_html__('Metros de fachada: ', 'chipicasa') . esc_html($campos['m_fachada']) . '</li>';
 										}
-
 										if (!empty($campos['m_lineales'])) {
 											echo '<li>' . esc_html__('Metros lineales: ', 'chipicasa') . esc_html($campos['m_lineales']) . '</li>';
 										}
-
 										if (!empty($campos['superf_terreno'])) {
 											echo '<li>' . esc_html__('Superficie del terreno: ', 'chipicasa') . esc_html($campos['superf_terreno']) . '</li>';
 										}
-
 										if (!empty($campos['num_estancias'])) {
 											echo '<li>' . esc_html__('Nº de estancias: ', 'chipicasa') . esc_html($campos['num_estancias']) . '</li>';
 										}
-
 										if (!empty($campos['num_plantas'])) {
 											echo '<li>' . esc_html__('Nº de plantas: ', 'chipicasa') . esc_html($campos['num_plantas']) . '</li>';
 										}
-
 										if (!empty($campos['num_escap'])) {
 											echo '<li>' . esc_html__('Nº de escaparates: ', 'chipicasa') . esc_html($campos['num_escap']) . '</li>';
 										}
-
 										if (!empty($campos['num_ascensores'])) {
 											echo '<li>' . esc_html__('Nº de ascensores: ', 'chipicasa') . esc_html($campos['num_ascensores']) . '</li>';
 										}
-
 										if (!empty($campos['num_plazas'])) {
 											echo '<li>' . esc_html__('Nº de plazas de garaje: ', 'chipicasa') . esc_html($campos['num_plazas']) . '</li>';
 										}
-
 										if (!empty($campos['acceso_rodado']) && $campos['acceso_rodado'] === 'si') {
 											echo '<li>' . esc_html__('Acceso rodado: ', 'Chipicasa') . esc_html__('Sí', 'Chipicasa') . '</li>';
 										} else {
@@ -471,7 +454,6 @@ wp_enqueue_script('google-maps', "https://maps.googleapis.com/maps/api/js?key={$
 											}
 											echo '<li>' . esc_html__('Ubicación del local: ', 'chipicasa') . $ubicacion . '</li>';
 										}
-										
 										
 										if (!empty($campos['distribucion_oficina'])) {
 											$distribucion = '';
@@ -627,4 +609,3 @@ wp_enqueue_script('google-maps', "https://maps.googleapis.com/maps/api/js?key={$
 <?php endif; ?>
 
 <?php get_footer(); ?>
-<!--/ Property Single End /-->
