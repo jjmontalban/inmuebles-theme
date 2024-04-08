@@ -107,7 +107,7 @@ a:hover {
 }
 
 .nav-pills-a.nav-pills .nav-link {
-  color: #fef59a;
+  color: #000000;
   position: relative;
   font-weight: 600;
 }
@@ -195,13 +195,14 @@ a:hover {
   margin: 0 .2rem;
   border-color: transparent;
   padding: .5rem .8rem;
-  color: #000000;
+  color: #000;
 }
 
 .pagination-a .pagination .page-link:hover,
 .pagination-a .pagination .page-link:active,
 .pagination-a .pagination .page-link:focus {
   background-color: #eb5d0b;
+  color: #fff;
 }
 
 .pagination-a .pagination .page-link span {
@@ -944,7 +945,7 @@ a:hover {
   color: #ffffff;
   padding: 1rem 1.5rem;
   border: 2px solid #eb5d0b;
-  border-radius: 50px;
+  border-radius: 16px;
   text-transform: uppercase;
   letter-spacing: 0.030em;
 }
@@ -1100,7 +1101,7 @@ a:hover {
   color: #ffffff;
   padding: .6rem .8rem;
   border: 2px solid #eb5d0b;
-  border-radius: 50px;
+  border-radius: 16px;
   text-transform: uppercase;
   letter-spacing: 0.030em;
 }
@@ -1120,7 +1121,7 @@ a:hover {
 
 .card-info .card-info-title {
   font-size: 1rem;
-  color: #313131;
+  color: #ffffff;
 }
 
 .card-info li span {
@@ -1365,17 +1366,15 @@ footer .credits {
 
 .btn.btn-a:hover {
   background-color: #eb5d0b;
-  color: #000000;
 }
 
 .btn.btn-b {
   background-color: #eb5d0b;
-  color: #000000;
+  color: #ffffff;
 }
 
 .btn.btn-b:hover {
   background-color: #000000;
-  color: #ffffff;
 }
 
 .btn.btn-w {
@@ -1786,6 +1785,11 @@ footer .credits {
   .box-collapse .title-box-d .title-d {
     font-size: 1.3rem;
   }
+
+  .intro-single .title-single-box .title-single {
+    font-size: 1.8rem;
+  }
+
 }
 
 @media (max-width: 348px) {

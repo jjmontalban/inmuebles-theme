@@ -110,12 +110,14 @@ global $tipos_inmueble_map;
                 get_template_part('template-parts/pagination');
                 ?>
             </div>
-
             <div class="col-md-3">
                 <div class="row">
                     <!-- Sidebar -->
                     <?php get_sidebar(); ?>
                 </div>
+            </div>
+            <div class="row">
+
             </div>
         </div>
     </div>

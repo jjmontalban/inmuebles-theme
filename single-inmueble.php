@@ -149,16 +149,16 @@ wp_enqueue_script('google-maps', "https://maps.googleapis.com/maps/api/js?key={$
 											<?php if ($campos['calif_consumo'] ?? '') : ?>
 												<li class="d-flex justify-content-between">
 													<strong><?php esc_html_e('Consumo:', 'chipicasa'); ?></strong>
-													<span><?php echo esc_html($campos['calif_consumo']); ?></span>
 													<span><?php echo esc_html($campos['consumo']); ?></span>
+													<span><?php echo esc_html($campos['calif_consumo']); ?></span>
 												</li>
 											<?php endif; ?>
 											
 											<?php if ($campos['calif_emis'] ?? '') : ?>
 												<li class="d-flex justify-content-between">
 													<strong><?php esc_html_e('Emisiones:', 'chipicasa'); ?></strong>
-													<span><?php echo esc_html($campos['calif_emis']); ?></span>
 													<span><?php echo esc_html($campos['emisiones']); ?></span>
+													<span><?php echo esc_html($campos['calif_emis']); ?></span>
 												</li>
 											<?php endif; ?>
 											
@@ -598,6 +598,11 @@ wp_enqueue_script('google-maps', "https://maps.googleapis.com/maps/api/js?key={$
 								<div id="map" style="height: 400px; width: 100%; margin-bottom: 5%;"></div>
 							</div>
 						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<?php echo do_shortcode('[formulario_contacto]'); ?>
 					</div>
 				</div>
 			</div>
