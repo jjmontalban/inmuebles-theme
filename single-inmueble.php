@@ -600,8 +600,9 @@ wp_enqueue_script('google-maps', "https://maps.googleapis.com/maps/api/js?key={$
 						</div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-sm-12">
+				<div class="row row-form">
+					<div class="col-sm-3"></div>
+					<div class="col-sm-6">
 						<?php echo do_shortcode('[formulario_contacto]'); ?>
 					</div>
 				</div>

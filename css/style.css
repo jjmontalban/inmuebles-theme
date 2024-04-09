@@ -372,6 +372,9 @@ a:hover {
 }
 
 /*------/ Owl carousel /------*/
+.owl-carousel .owl-stage-outer {
+  border-radius: 15px;
+}
 
 .owl-theme .owl-dots {
   text-align: center;
@@ -466,6 +469,7 @@ a:hover {
 
 .nav-arrow-b .owl-arrow .owl-nav .owl-next {
   margin-left: 0px;
+  border-radius: 0 15px 0 0 !important;
 }
 
 /*------/ Socials /------*/
@@ -1010,6 +1014,10 @@ a:hover {
   background-color: transparent;
   padding-right: 0;
   padding-left: 0;
+}
+
+.row-form {
+  margin-top: 5%;
 }
 
 /*======================================
