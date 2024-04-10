@@ -49,7 +49,7 @@ wp_enqueue_script('google-maps', "https://maps.googleapis.com/maps/api/js?key={$
 				<div class="row">
                     <div class="col-md-12 col-lg-8">
                         <div class="title-single-box">
-                            <h1 class="title-single"><?php echo esc_html($tipos_inmueble_map[$tipo_inmueble]) . esc_html(' en ', 'chipicasa') . esc_html($campos['nombre_calle']) ?></h1>
+							<h1 class="title-single"><?php echo isset($tipos_inmueble_map[$tipo_inmueble]) ? esc_html($tipos_inmueble_map[$tipo_inmueble]) : '' . esc_html(' en ', 'chipicasa') . esc_html($campos['nombre_calle']) ?></h1>
                             <span class="color-text-a"><?php echo esc_html($campos['localidad']); ?></span>
                         </div>
                     </div>
