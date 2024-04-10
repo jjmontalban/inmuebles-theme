@@ -25,7 +25,7 @@ global $tipos_inmueble_map;
                     <?php if ($query->have_posts()) : ?>
                         <?php while ($query->have_posts()) : $query->the_post() ?>
                             <?php
-                            $tipo_inmueble = get_post_meta(get_the_ID(), 'tipo_inmueble', true);
+                            $tipo_inmueble = unserialize(get_post_meta(get_the_ID(), 'tipo_inmueble', true));
                             $campos = obtener_campos_inmueble($post->ID);
                             ?>
                             <div class="col-md-4">
