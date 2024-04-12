@@ -1084,6 +1084,11 @@ a:hover {
   padding: 0 1rem;
 }
 
+h2.card-title-a {
+  font-size: calc(2vw + 1.5rem);
+}
+
+
 .card-header-a .card-title-a {
   color: #ffffff;
   margin-bottom: 0;
@@ -1422,6 +1427,8 @@ footer .credits {
 
 
 @media (min-width: 576px) {
+
+
   .intro .intro-title {
     font-size: 3.5rem;
   }
@@ -1453,6 +1460,9 @@ footer .credits {
 }
 
 @media (min-width: 768px) {
+  .container {
+    max-width: 100%;
+  }
   .link-a {
     font-size: .9rem;
   }
@@ -1541,7 +1551,7 @@ footer .credits {
   }
 
   .card-header-a .card-title-a {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 
   .card-info .card-info-title {
@@ -1617,6 +1627,9 @@ footer .credits {
 }
 
 @media (min-width: 992px) {
+  .container {
+    max-width: 992px;
+  }
   .link-a {
     font-size: 1rem;
   }
@@ -1656,7 +1669,7 @@ footer .credits {
   }
 
   .card-header-a .card-title-a {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 
   .card-info .card-info-title {
@@ -1787,6 +1800,7 @@ footer .credits {
 }
 
 @media (max-width: 575px) {
+
   .navbar-brand img {
     width: 200px; 
     height: auto;
@@ -1812,3 +1826,6 @@ footer .credits {
     height: auto;
   }
 }
+
+
+

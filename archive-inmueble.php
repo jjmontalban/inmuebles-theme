@@ -14,8 +14,8 @@ global $tipos_inmueble_map;
 ?>
 <section class="property-grid grid">
     <div class="container">
-        <div class="row">
-            <div class="col-md-8">
+        <div class="row px-md-3">
+            <div class="col-lg-8">
                 <div class="row">
                     <?php
                     $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -49,7 +49,7 @@ global $tipos_inmueble_map;
                                                     <div class="price-box d-flex">
                                                         <span class="price-a">
                                                             <?php if ($campos['precio_venta']) : ?>
-                                                                <?php echo $campos['precio_venta']; ?> €
+                                                                <?php echo number_format( $campos['precio_venta'], 0, ',', '.' ); ?> €
                                                             <?php else : ?>
                                                                 <?php printf(esc_html__('%s €/mes', 'chipicasa'), $campos['precio_alquiler']); ?>
                                                             <?php endif; ?>
@@ -110,14 +110,11 @@ global $tipos_inmueble_map;
                 get_template_part('template-parts/pagination');
                 ?>
             </div>
-            <div class="col-md-3">
+            <div class="col-lg-3">
                 <div class="row">
                     <!-- Sidebar -->
                     <?php get_sidebar(); ?>
                 </div>
-            </div>
-            <div class="row">
-
             </div>
         </div>
     </div>

@@ -79,8 +79,13 @@ wp_enqueue_script('google-maps', "https://maps.googleapis.com/maps/api/js?key={$
 										
 										<div class="card-title-c align-self-center">
 											<h5 class="title-c">
-                                                <?php echo isset($campos['precio_venta']) ? esc_html($campos['precio_venta']) : 
-                                                    (isset($campos['precio_alquiler']) ? esc_html($campos['precio_alquiler']) : ''); ?>    
+											<?php
+											if (isset($campos['precio_venta'])) {
+												echo esc_html(number_format($campos['precio_venta'], 0, ',', '.'));
+											} elseif (isset($campos['precio_alquiler'])) {
+												echo esc_html($campos['precio_alquiler']);
+											}
+											?>
                                             </h5>
 										</div>
 										<div class="card-box-ico">
