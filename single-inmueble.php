@@ -240,7 +240,7 @@ wp_enqueue_script('google-maps', "https://maps.googleapis.com/maps/api/js?key={$
 										if (!empty($campos['interior_ext'])) {
 											echo '<li>' . esc_html__('Ubicación: ', 'chipicasa') . esc_html($campos['interior_ext']) . '</li>';
 										}
-										if($tipo_inmueble != "casa_chalet") {
+										if($tipo_inmueble != "casa_chalet" && $tipo_inmueble != "terreno") {
 											echo (!empty($campos['ascensor'] && $campos['ascensor'] === 'si')) ? '<li>Tiene ascensor</li>' : '<li>No tiene ascensor</li>';
 										}
 										if (!empty($campos['ac'])) {
@@ -404,7 +404,7 @@ wp_enqueue_script('google-maps', "https://maps.googleapis.com/maps/api/js?key={$
 											echo '<li>' . esc_html__('Nº de plazas de garaje: ', 'chipicasa') . esc_html($campos['num_plazas']) . '</li>';
 										}
 										if($tipo_inmueble != "piso" && $tipo_inmueble != "casa_chalet") {
-											if (!empty($campos['acceso_rodado']) && $campos['acceso_rodado'] === 'si') {
+											if (!empty($campos['acceso_rodado']) && $campos['acceso_rodado'] === 'si_tiene') {
 												echo '<li>' . esc_html__('Acceso rodado: ', 'Chipicasa') . esc_html__('Sí', 'Chipicasa') . '</li>';
 											} else {
 												echo '<li>' . esc_html__('Acceso rodado: ', 'Chipicasa') . esc_html__('No disponible', 'chipicasa') . '</li>';
