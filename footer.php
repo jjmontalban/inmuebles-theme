@@ -24,9 +24,6 @@
 					&copy;<?php echo esc_html(date(' Y ')) . '<span class="color-a"> ' . esc_html( get_bloginfo('name') ) . '</span>'; ?>       
 				</p>
 			</div>
-			<div class="credits">
-				<?php echo '<a target="_blank" href="https://jjmontalban.github.io/">JJMöntalban</a>'; ?>
-			</div>
 			</div>
 		</div>
 	</div>
