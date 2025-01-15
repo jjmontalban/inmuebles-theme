@@ -1,26 +1,36 @@
 function initMap() {
-    // Crea un nuevo mapa de Google
-    var map = new google.maps.Map(document.getElementById('map'), {
+    const lat = parseFloat(datos_mapa.lat);
+    const lng = parseFloat(datos_mapa.lng);
+
+    // Validar coordenadas
+    if (isNaN(lat) || isNaN(lng)) {
+        console.error("Coordenadas no válidas:", datos_mapa);
+        return;
+    }
+
+    // Configuración inicial del mapa
+    const map = new google.maps.Map(document.getElementById('map'), {
         zoom: 15,
-        center: {lat: parseFloat(datos_mapa.lat), lng: parseFloat(datos_mapa.lng)}
+        center: { lat: lat, lng: lng }
     });
 
-    // Añade un marcador o un círculo al mapa dependiendo de la visibilidad de la dirección
+    // Controlar la visibilidad de la dirección
     if (datos_mapa.visibilidad_direccion === 'direccion_exacta') {
-        var marker = new google.maps.Marker({
-            position: {lat: parseFloat(datos_mapa.lat), lng: parseFloat(datos_mapa.lng)},
-            map: map
+        new google.maps.marker.AdvancedMarkerElement({
+            position: { lat: lat, lng: lng },
+            map: map,
+            title: "Ubicación del inmueble"
         });
     } else if (datos_mapa.visibilidad_direccion === 'solo_calle') {
-        var circle = new google.maps.Circle({
-            center: {lat: parseFloat(datos_mapa.lat), lng: parseFloat(datos_mapa.lng)},
+        const circle = new google.maps.Circle({
+            center: { lat: lat, lng: lng },
             radius: 150,
             map: map
         });
         map.fitBounds(circle.getBounds());
     } else if (datos_mapa.visibilidad_direccion === 'ocultar_direccion') {
-        var circle = new google.maps.Circle({
-            center: {lat: parseFloat(datos_mapa.lat), lng: parseFloat(datos_mapa.lng)},
+        const circle = new google.maps.Circle({
+            center: { lat: lat, lng: lng },
             radius: 3000,
             map: map
         });
