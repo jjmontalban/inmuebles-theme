@@ -1,38 +1,42 @@
 function initMap() {
-    const lat = parseFloat(datos_mapa.lat);
-    const lng = parseFloat(datos_mapa.lng);
-
-    // Validar coordenadas
-    if (isNaN(lat) || isNaN(lng)) {
-        console.error("Coordenadas no válidas:", datos_mapa);
-        return;
-    }
-
-    // Configuración inicial del mapa
-    const map = new google.maps.Map(document.getElementById('map'), {
+    // Crear un nuevo mapa de Google centrado en las coordenadas especificadas
+    var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 15,
-        center: { lat: lat, lng: lng }
+        center: { lat: parseFloat(datos_mapa.lat), lng: parseFloat(datos_mapa.lng) }
     });
 
-    // Controlar la visibilidad de la dirección
+    // Verifica el tipo de visibilidad para configurar el marcador o círculo
     if (datos_mapa.visibilidad_direccion === 'direccion_exacta') {
-        new google.maps.marker.AdvancedMarkerElement({
-            position: { lat: lat, lng: lng },
+        // Usar el marcador clásico
+        var marker = new google.maps.Marker({
+            position: { lat: parseFloat(datos_mapa.lat), lng: parseFloat(datos_mapa.lng) },
             map: map,
-            title: "Ubicación del inmueble"
+            title: "Ubicación Exacta"
         });
     } else if (datos_mapa.visibilidad_direccion === 'solo_calle') {
-        const circle = new google.maps.Circle({
-            center: { lat: lat, lng: lng },
-            radius: 150,
-            map: map
+        // Crear un círculo pequeño para representar la ubicación
+        var circle = new google.maps.Circle({
+            center: { lat: parseFloat(datos_mapa.lat), lng: parseFloat(datos_mapa.lng) },
+            radius: 150, // Radio en metros
+            map: map,
+            fillColor: '#FF0000',
+            fillOpacity: 0.35,
+            strokeColor: '#FF0000',
+            strokeOpacity: 0.8,
+            strokeWeight: 2
         });
         map.fitBounds(circle.getBounds());
     } else if (datos_mapa.visibilidad_direccion === 'ocultar_direccion') {
-        const circle = new google.maps.Circle({
-            center: { lat: lat, lng: lng },
-            radius: 3000,
-            map: map
+        // Crear un círculo más grande para ocultar detalles exactos
+        var circle = new google.maps.Circle({
+            center: { lat: parseFloat(datos_mapa.lat), lng: parseFloat(datos_mapa.lng) },
+            radius: 3000, // Radio en metros
+            map: map,
+            fillColor: '#0000FF',
+            fillOpacity: 0.2,
+            strokeColor: '#0000FF',
+            strokeOpacity: 0.5,
+            strokeWeight: 1
         });
         map.fitBounds(circle.getBounds());
     }
