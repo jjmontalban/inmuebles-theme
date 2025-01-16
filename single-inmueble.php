@@ -403,13 +403,13 @@ wp_enqueue_script('google-maps', "https://maps.googleapis.com/maps/api/js?key={$
 										if (!empty($campos['num_plazas'])) {
 											echo '<li>' . esc_html__('Nº de plazas de garaje: ', 'chipicasa') . esc_html($campos['num_plazas']) . '</li>';
 										}
-										if($tipo_inmueble != "piso" && $tipo_inmueble != "casa_chalet") {
+										/* if($tipo_inmueble != "piso" && $tipo_inmueble != "casa_chalet") {
 											if (!empty($campos['acceso_rodado']) && $campos['acceso_rodado'] === 'si_tiene') {
 												echo '<li>' . esc_html__('Acceso rodado: ', 'Chipicasa') . esc_html__('Sí', 'Chipicasa') . '</li>';
 											} else {
 												echo '<li>' . esc_html__('Acceso rodado: ', 'Chipicasa') . esc_html__('No disponible', 'chipicasa') . '</li>';
 											}
-										}
+										} */
 										if (!empty($campos['si_rodado'])) {
 											echo '<li>' . esc_html__('Tipo de acceso: ', 'chipicasa');
 											switch ($campos['si_rodado']) {
@@ -435,9 +435,9 @@ wp_enqueue_script('google-maps', "https://maps.googleapis.com/maps/api/js?key={$
 											echo '</li>';
 										}
 										
-										$mensaje = (!empty($campos['uso_excl'] && $campos['uso_excl'] === 'si')) 
+										/* $mensaje = (!empty($campos['uso_excl'] && $campos['uso_excl'] === 'si')) 
 										? esc_html__('Uso exclusivo: Sí', 'chipicasa') 
-										: esc_html__('Uso exclusivo: No', 'chipicasa');
+										: esc_html__('Uso exclusivo: No', 'chipicasa'); */
 										
 										if($tipo_inmueble != "piso" && $tipo_inmueble != "casa_chalet") {
 											echo '<li>' . $mensaje . '</li>';
