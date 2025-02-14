@@ -53,12 +53,14 @@ global $tipos_inmueble_map;
                                                 <div class="card-body-a">
                                                     <div class="price-box d-flex">
                                                         <span class="price-a">
+                                                        <?php if (empty($campos['reservado']) || $campos['reservado'] !== 'si') : ?>
                                                             <?php if ($campos['precio_venta']) : ?>
                                                                 <?php echo number_format( $campos['precio_venta'], 0, ',', '.' ); ?> €
                                                             <?php else : ?>
                                                                 <?php printf(esc_html__('%s €/mes', 'chipicasa'), $campos['precio_alquiler']); ?>
                                                             <?php endif; ?>
                                                         </span>
+                                                        <?php endif; ?>
                                                     </div>
                                                 </div>
                                                 <div class="card-footer-a">

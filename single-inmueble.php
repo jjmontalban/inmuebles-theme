@@ -81,7 +81,7 @@ wp_enqueue_script('google-maps', "https://maps.googleapis.com/maps/api/js?key={$
 							
 								<div class="property-price d-flex justify-content-center foo">
 									<div class="card-header-c d-flex">
-										
+										<?php if (empty($campos['reservado']) || $campos['reservado'] !== 'si') : ?>
 										<div class="card-title-c align-self-center">
 											<h5 class="title-c">
 											<?php
@@ -100,6 +100,7 @@ wp_enqueue_script('google-maps', "https://maps.googleapis.com/maps/api/js?key={$
                                                 ?>  
                                             </span>
 										</div>
+										<?php endif; ?>
 									</div>
 								</div>
 
