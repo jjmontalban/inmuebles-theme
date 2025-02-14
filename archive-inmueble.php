@@ -39,6 +39,11 @@ global $tipos_inmueble_map;
                                         <div class="card-overlay">
                                             <div class="card-overlay-a-content">
                                                 <div class="card-header-a">
+                                                <?php if (!empty($campos['reservado']) && $campos['reservado'] === 'si') : ?>
+    <div class="badge badge-danger" style="position: absolute; top: -60px; left: 10px; background: red; color: white; padding: 15px 10px; font-size: 0.8rem; font-weight: bold; border-radius: 5px;">
+        🔴 RESERVADO
+    </div>
+<?php endif; ?>
                                                     <h2 class="card-title-a">
                                                         <?php echo esc_html__($tipos_inmueble_map[$tipo_inmueble], 'chipicasa'); ?>
                                                         <br /> <?php echo esc_html__('in', 'chipicasa'); ?> <?php echo esc_html__($campos['nombre_calle'], 'chipicasa'); ?>

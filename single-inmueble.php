@@ -63,6 +63,11 @@ wp_enqueue_script('google-maps', "https://maps.googleapis.com/maps/api/js?key={$
 				<div class="row">
 					<div class="col-sm-12">
 						<!-- Galería de imágenes -->
+						<?php if (!empty($campos['reservado']) && $campos['reservado'] === 'si') : ?>
+						<div class="alert alert-danger text-center" style="font-size: 1.5rem; font-weight: bold; padding: 10px; margin-bottom: 15px;">
+							🔴 RESERVADO
+						</div>
+						<?php endif; ?>
 						<div id="property-single-carousel" class="owl-carousel owl-arrow gallery-property">
 							<?php foreach ($campos['galeria_imagenes'] ?? '' as $imagen) : ?>
 								<div class="carousel-item-b">
