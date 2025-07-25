@@ -553,11 +553,12 @@ wp_enqueue_script('google-maps', "https://maps.googleapis.com/maps/api/js?key={$
 											}
 										}
 
-										$estado_conservation_text = empty($campos['estado_cons'] || $campos['estado_cons'] !== 'buen_estado') 
-										? esc_html__('A reformar', 'chipicasa') 
-										: esc_html__('En buen estado', 'chipicasa');
-									
+										$estado_conservation_text = empty($campos['estado_cons']) || $campos['estado_cons'] !== 'buen_estado'
+											? esc_html__('A reformar', 'chipicasa')
+											: esc_html__('En buen estado', 'chipicasa');
+
 										echo '<li>' . esc_html__('Estado de Conservación: ', 'chipicasa') . $estado_conservation_text . '</li>';
+
 										?> 
 									</ul>
 								</div>
